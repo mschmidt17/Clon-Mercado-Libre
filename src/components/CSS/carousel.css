@@ -1,0 +1,39 @@
+.slider {
+    width:100%;
+    margin: auto;
+    overflow: hidden;
+}
+  
+.slider ul {
+    display: flex;
+    padding: 0;
+    animation: cambio1 9s infinite alternate linear;
+}
+  
+.slider li {
+    list-style: none;
+}
+  
+.slider img {
+    height: 380px;
+}
+
+@keyframes cambio1 {
+	0% {margin-left: 0;}
+	19% {margin-left: 0;}
+
+    20% {margin-left: -100%;}
+	39% {margin-left: -100%;}
+
+    40% {margin-left: -200%;}
+	59% {margin-left: -200%;}
+	
+	60% {margin-left: -300%;}
+	79% {margin-left: -300%;}
+	
+	80% {margin-left: -400%;}
+	100% {margin-left: -400%;}
+
+}
+   
+ 

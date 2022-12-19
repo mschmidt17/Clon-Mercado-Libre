@@ -1,0 +1,40 @@
+.container-navbar{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--navbar-color);
+    height: 120px;
+    padding: 0 10%;
+    justify-content: space-around;
+}
+
+.top-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.bottom-navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.location{
+    display: flex;
+    cursor: pointer;
+}
+
+.lista{
+    display: flex;
+    justify-content: space-between;
+    width: 30rem;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.cart{
+    display: flex;
+    justify-content: space-between;
+    width: 18rem;
+    cursor: pointer;
+}
