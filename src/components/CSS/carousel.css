@@ -1,5 +1,5 @@
 .slider {
-    width:100%;
+    width: 100%;
     margin: auto;
     overflow: hidden;
 }
@@ -8,6 +8,7 @@
     display: flex;
     padding: 0;
     animation: cambio1 9s infinite alternate linear;
+    margin: 0;
 }
   
 .slider li {
@@ -15,7 +16,7 @@
 }
   
 .slider img {
-    height: 380px;
+    height: 340px;
 }
 
 @keyframes cambio1 {

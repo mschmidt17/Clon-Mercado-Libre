@@ -1,6 +1,54 @@
-.item{
+.payment-container{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-direction: row;
+    background-color: white;
+    margin: 2.2% 12.5%;
+    border-radius: 4px;
+}
+
+p{
+    margin: 0;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22%;
+    margin: 1.8% 0;
+}
+
+.plus{
+    display: flex;
+    height: 5.6rem;
+    width: 8%;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid rgba(204, 202, 202, 0.712);
+}
+
+.pay-plus{
+    display: flex;
+    width: 38px;
+    height: 38px;
+    border: 1px solid rgba(204, 202, 202, 0.712);
+    border-radius: 100px;
+    padding: 4.5%;
+}
+
+.pay-img{
+    display: flex;
+    width: 22px;
+    height: 22px;
+    border: 1px solid rgba(204, 202, 202, 0.712);
+    border-radius: 100px;
+    padding: 4.5%;
+    margin-right: 6%;
+}
+
+.pay-subtext{
+    color: #2a78ec;
+    font-size: 0.8rem;
 }
