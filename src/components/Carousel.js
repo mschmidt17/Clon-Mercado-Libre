@@ -15,31 +15,24 @@ function Carousel() {
 
     <div className="slider">
       <ul>
-
         <li>
           <img src={navidad}alt="gaming" />
         </li>
-
         <li>
           <img src={navidad1}alt="gaming" />
         </li>
-
         <li>
           <img src={gaming}alt="gaming" />
         </li>
-
         <li>
             <img src={deco}alt="deco"/>
         </li>
-
         <li>
           <img src={tv} alt="iluminacion" />
         </li>
-
         <li>
           <img src={aire} alt="aire" />
         </li>
-
       </ul>
     </div>
   
