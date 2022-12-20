@@ -1,28 +1,29 @@
 import React from 'react';
-import hbo from "../assets/HBO.webp";
-import paramount from "../assets/paramount_.jpg";
-import "./";
+import "./CSS/discover.css";
 
 
-
-function Discover() {
+function Discover({data, title}) {
 
   return (
-    <div className="container-benefits">
+    <div className="container-discover">
+      <div className="discover-top">
+        <h2 className="discover-title"> {title} </h2>
+      </div>
 
-        <div className="benefits">
-            <img src={widget} width='320' alt="Widget"/>
-            <p> Sin cargo con el nivel 6 </p>
-            <p> Disney+ y Star+ </p>
-        </div>
+      <div className='container-row'>
+        {data?.map((e) => {return(
+          
+          <div className='discover-card'>
+            <div className='discover-text'>
+              <h6 className='discover-cat'> NAVIDAD{e.category} </h6>
+              <h2 className='discover-promo'> {e.text} </h2>
+              <button className='discover-btn'> Ver más </button>
+            </div>
 
-        <div className="benefits">
-            <img src={hbo} width='320' alt="HBO"/>
-            <h5> 7 DIAS GRATIS </h5>
-            <p> Hasta 50% OFF </p>
-            <p> HBO Max </p>
-        </div>
-
+            <img src={e.image} className="discover-img" alt="product"/>
+          </div>
+        )})}
+      </div>
 
     </div>
   );

@@ -7,6 +7,7 @@ import Offers from '../components/Offers.js';
 import Subscription from '../components/Subscription.js';
 import Benefits from '../components/Benefits.js';
 import Advertising from '../components/Advertising';
+import Discover from '../components/Discover.js';
 
 
 
@@ -17,6 +18,9 @@ function Home() {
   const dispatch = useDispatch()
   const isLoading = useSelector((state) => state.loading)
   const listCategories = useSelector((state) => state.categories)
+  const discover = useSelector((state) => state.discover);
+  const interests = useSelector((state) => state.interests);
+
 
   useEffect(() => {
     dispatch(offers());
@@ -31,6 +35,10 @@ function Home() {
         <Subscription/>
         <Benefits/>
         <Advertising/>
+        <Discover data={discover} title="Descubrí"/>
+        <Offers/>
+        <Discover data={interests} title="Te puede interesar"/>
+
 
         <h2>CATEGORIES: </h2>
         {listCategories?.map(category => {

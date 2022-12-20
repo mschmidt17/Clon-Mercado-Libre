@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    margin: 4% 0;
 }
 
 .offers-top{
@@ -16,6 +17,7 @@
     font-weight: lighter;
     font-size: 1.7rem;
     margin-right: 1.5%;
+    color: #727272;
 }
 
 .offers-seeAll{
