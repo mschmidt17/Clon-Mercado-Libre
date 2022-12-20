@@ -9,8 +9,18 @@
 
 .img-adv{
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
     width: 714px;
+    height: 249px;
     border-radius: 4px 0 0 4px;
+    background-size: cover;
+}
+
+.img-logo{
+    border-radius: 4px;
+    margin: 2% 0 1% 9%;
 }
 
 .adv-text{
@@ -18,10 +28,21 @@
     flex-direction: column;
     background-color: #FF7733;
     color: white;
-    height: 249px;
+    height: 216px;
     width: 424px;
     align-items: flex-start;
-    padding-left: 3%;
+    padding: 2% 0 0 4%;
     justify-content: center;
     border-radius: 0 4px 4px 0;
+}
+
+.discount-adv{
+    margin: 0;
+    letter-spacing: 4px;
+    font-size: 0.7rem;
+}
+
+.title-discount{
+    margin-top: 0;
+    letter-spacing: 1px;
 }
