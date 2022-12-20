@@ -6,7 +6,7 @@ import Payments from '../components/Payments.js';
 import Offers from '../components/Offers.js';
 import Subscription from '../components/Subscription.js';
 import Benefits from '../components/Benefits.js';
-
+import Advertising from '../components/Advertising';
 
 
 
@@ -30,6 +30,7 @@ function Home() {
         <Offers/>
         <Subscription/>
         <Benefits/>
+        <Advertising/>
 
         <h2>CATEGORIES: </h2>
         {listCategories?.map(category => {

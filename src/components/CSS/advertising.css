@@ -1,0 +1,27 @@
+.container-advertising{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 6% 0;
+}
+
+.img-adv{
+    display: flex;
+    width: 714px;
+    border-radius: 4px 0 0 4px;
+}
+
+.adv-text{
+    display: flex;
+    flex-direction: column;
+    background-color: #FF7733;
+    color: white;
+    height: 249px;
+    width: 424px;
+    align-items: flex-start;
+    padding-left: 3%;
+    justify-content: center;
+    border-radius: 0 4px 4px 0;
+}
