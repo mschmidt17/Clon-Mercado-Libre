@@ -16,6 +16,30 @@
     border-radius: 7px 7px 0 0;
 }
 
+.subscription-promo{
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid white;
+    padding-left: 0.8%;
+}
+
+.subscription-algo{
+    display: flex;
+    align-items: flex-end;
+}
+
+.subscription-number{
+    font-size: larger;
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin: -5px 0 -3px 0;
+    letter-spacing: 1px;
+}
+
+.subscription-num{
+    font-size: 0.8rem;
+}
+
 .susbscription-bottom{
     display: flex;
     flex-direction: column;
@@ -24,18 +48,33 @@
     border-radius: 0 0 7px 7px;
 }
 
+.subscription-text{
+    padding: 1.5% 0 0 2%;
+    font-size: 1.1rem;
+    color: rgb(75, 75, 75);
+}
+
 .subscription-options{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    border-bottom: 1px solid rgba(214, 212, 212, 0.89);
+    border-bottom: 1px solid rgba(214, 212, 212, 0.705);
 }
 
 .icon-subscription{
     display: flex;
-    width: 19rem;
+    width: 22.6rem;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
+    margin: 2.5% 0 2% 0;
+    color: rgb(75, 75, 75);
+}
+
+.circle-icon{
+    border-radius: 100px;
+    border: 1px solid rgba(168, 166, 166, 0.397);
+    width: 4.6rem;
+    margin-right: 5%;
 }
 
 .subscription-btn-container{
