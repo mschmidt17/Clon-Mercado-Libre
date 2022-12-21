@@ -7,7 +7,7 @@ function Card({offer}) {
     const discount = Math.round((offer.original_price - offer.price) / offer.original_price * 100)
     const freeShipping = offer.shipping.free_shipping
     const cuotes = (offer.price/6).toFixed(2)
-    console.log(offer)
+    
 
     return(
         <div className="card-container"> 

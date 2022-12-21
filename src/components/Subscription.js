@@ -13,7 +13,7 @@ function Subscription() {
                 <div className="subscription-promo">
                     <p className="subscription-num"><del>$ 1.439</del></p>
                     <div className="subscription-algo">
-                        <p className="subscription-number">$499</p>
+                        <p className="subscription-number">$ 499</p>
                         <p className="subscription-num">/mes </p>
                     </div>
                 </div>
