@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    cursor: pointer;
 }
 
 .discover-top{
@@ -34,6 +35,11 @@
     height: 16rem;
     background-color: white;
     border-radius: 4px;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%);
+}
+
+.discover-card:hover{
+    box-shadow: 0 4px 12px 5px #6362623b;
 }
 
 .discover-text{
@@ -57,13 +63,18 @@
 }
 
 .discover-btn{
-    background: #3876d4;
+    background: #3876d4ec;
     border: none;
     border-radius: 2px;
     height: 2.3rem;
     width: 6rem;
     color: white;
     margin-top: 5%;
+    cursor: pointer;
+}
+
+.discover-btn:hover{
+    background-color: #236ad3 ;
 }
 
 .discover-img{

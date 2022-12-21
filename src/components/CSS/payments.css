@@ -26,29 +26,25 @@ p{
     width: 8%;
     align-items: center;
     justify-content: center;
-    border-left: 1px solid rgba(204, 202, 202, 0.712);
+    border-left: 1px solid rgba(204, 202, 202, 0.438);
 }
 
 .pay-plus{
     display: flex;
-    width: 38px;
-    height: 38px;
-    border: 1px solid rgba(204, 202, 202, 0.712);
+    width: 50px;
     border-radius: 100px;
-    padding: 4.5%;
 }
 
 .pay-img{
     display: flex;
-    width: 22px;
-    height: 22px;
-    border: 1px solid rgba(204, 202, 202, 0.712);
+    width: 50px;
     border-radius: 100px;
-    padding: 4.5%;
     margin-right: 6%;
+    cursor: pointer;
 }
 
 .pay-subtext{
     color: #2a78ec;
     font-size: 0.8rem;
+    cursor: pointer;
 }

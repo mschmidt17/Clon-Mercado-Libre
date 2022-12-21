@@ -46,11 +46,16 @@
 }
 
 .subscription-btn{
-    background: #3876d4;
+    background: #3876d4f1;
     padding: 1.2% 2%;
     margin: 1.4% 0;
     color: white;
     border: none;
     border-radius: 6px;
     font-size: 1rem;
+    cursor: pointer;
+}
+
+.subscription-btn:hover{
+    background-color: #236ad3 ;
 }

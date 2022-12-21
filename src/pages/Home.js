@@ -8,6 +8,7 @@ import Subscription from '../components/Subscription.js';
 import Benefits from '../components/Benefits.js';
 import Advertising from '../components/Advertising';
 import Discover from '../components/Discover.js';
+import Categories from '../components/Categories.js';
 
 
 
@@ -17,7 +18,6 @@ import Discover from '../components/Discover.js';
 function Home() {
   const dispatch = useDispatch()
   const isLoading = useSelector((state) => state.loading)
-  const listCategories = useSelector((state) => state.categories)
   const discover = useSelector((state) => state.discover);
   const interests = useSelector((state) => state.interests);
 
@@ -38,16 +38,10 @@ function Home() {
         <Discover data={discover} title="Descubrí"/>
         <Offers/>
         <Discover data={interests} title="Te puede interesar"/>
+        <Categories/>
 
 
-        <h2>CATEGORIES: </h2>
-        {listCategories?.map(category => {
-          return (
-            <div key={category.id}>
-              <p>{category.name}</p>
-            </div>
-          )
-        })}
+
     </div>
   );
 }
