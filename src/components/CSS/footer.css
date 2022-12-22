@@ -1,0 +1,101 @@
+.container-footer{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin-top: 4%;
+    padding-top: 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-name{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 78%;
+}
+
+.card-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 30%;
+    padding: 0 4.3%;
+}
+
+.vertical-line{
+    display: flex;
+    width: 0px;
+    height: 3.8rem;
+    color: rgba(192, 191, 191, 0.534);
+    border: 0.5px solid;
+    border-right: none;
+}
+
+.footer-text{
+    margin-top: 5%;
+}
+
+.footer-subtext1{
+    color: #474747;
+    font-size: 1.2rem;
+}
+
+.footer-subtext2{
+    color: #a09e9e;
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin: 1.8% 0 2.2% 0;
+}
+
+.footer-subtext3{
+    color: #4686ec;
+    font-size: 0.9rem;
+}
+
+.footer-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+    text-align: center;
+    margin: 3% 0;
+}
+
+.footer-box{
+    width: 45%;
+    border: 1px solid rgba(184, 179, 179, 0.514);
+    border-radius: 6px;
+    height: 7.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-box-title{
+    color: #757474;
+    font-size: 1rem;
+}
+
+.footer-insurance{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 94%;
+}
+
+.icon-ssn{
+    margin-right: 0.8%;
+}
+
+.footer-none{
+    display: flex;
+    width: 76%;
+    font-size: 0.7rem;
+    justify-content: space-evenly;
+    margin: 2% 0;
+}
+

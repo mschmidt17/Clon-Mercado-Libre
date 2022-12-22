@@ -9,6 +9,7 @@ import Benefits from '../components/Benefits.js';
 import Advertising from '../components/Advertising';
 import Discover from '../components/Discover.js';
 import Categories from '../components/Categories.js';
+import Footer from '../components/Footer.js';
 
 
 
@@ -28,6 +29,7 @@ function Home() {
   }, [])
 
   return (
+
     <div className='container-home'>
         <Carousel/>
         <Payments/>
@@ -39,8 +41,6 @@ function Home() {
         <Offers/>
         <Discover data={interests} title="Te puede interesar"/>
         <Categories/>
-
-
 
     </div>
   );
