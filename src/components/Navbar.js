@@ -4,6 +4,7 @@ import nivel from "../assets/nivel.webp";
 import {CiLocationOn} from "react-icons/ci";
 import {BsCart2} from "react-icons/bs";
 import {RiArrowDropDownLine} from "react-icons/ri";
+import { Link } from 'react-router-dom';
 import Search from './Search.js';
 import './CSS/navbar.css';
 
@@ -15,7 +16,9 @@ function Navbar() {
 
       <div className='top-navbar'>
         <div className='logo'>
-          <img src={logo} width="140" alt="logo"/>
+          <Link to='/'>
+            <img src={logo} width="140" alt="logo"/>
+          </Link>
         </div>
         <Search/>
         <div className='nivel'>
@@ -43,7 +46,9 @@ function Navbar() {
           <a> Crea tu cuenta  </a>
           <a> Ingresa </a>
           <a> Mis compras </a>
-          <BsCart2/>
+          <Link to='/cart'>
+            <BsCart2/>
+          </Link>
         </div>
 
       </div>

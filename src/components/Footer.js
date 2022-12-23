@@ -44,7 +44,7 @@ function Footer() {
         </div>
 
         <div className='footer-box'>
-          <p className='footer-box-title'> <b>C</b>onocé las normas que appcan cuando comprás </p>
+          <p className='footer-box-title'> <b>C</b>onocé las normas que aplican cuando comprás </p>
           <p className='footer-subtext3'> Ver contratos de adhesión - Ley N.º 24.240 de Defensa del Consumidor </p>
         </div>
 
@@ -53,13 +53,14 @@ function Footer() {
       <div className='footer-insurance'>
         <img src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/insurance/ssnlogo.svg" alt="insurance" className="icon-ssn" width="300"/>
         <img src="https://http2.mlstatic.com/resources/sell/banner_usuarios_financieros.svg" alt="user" className="icon-ssn"/>
+        <img src="" alt="user" className="icon-ssn"/>
       </div>
 
         <div className='footer-none'>
           <p> Trabajá con nosotros </p>
           <p> Términos y condiciones </p>
           <p> Cómo cuidamos tu privacidad</p>
-          <p> Accesibipdad </p>
+          <p> Accesibildad </p>
           <p> Información al usuario financiero </p>
           <p> Ayuda </p>
           <p> Defensa del consumidor </p>

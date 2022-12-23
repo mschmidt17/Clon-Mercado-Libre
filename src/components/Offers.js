@@ -21,7 +21,7 @@ export default function Offers() {
                 {listOffers?.map(offer => {
                 return (
                     <div key={offer.id}>
-                        <Link to={`/detail/:${offer.id}`} style={{"textDecoration":"none"}}>
+                        <Link to={`/detail/${offer.id}`} style={{"textDecoration":"none"}}>
                             <Card offer={offer}/>
                         </Link>
                     </div>
