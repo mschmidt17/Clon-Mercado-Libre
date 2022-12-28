@@ -67,8 +67,10 @@ function Footer() {
           <p> Información sobre seguros </p>
         </div>
 
-
-
+        <div className='footer-end'>
+          <p className='p-footer'> Copyright © 1999-2022 MercadoLibre S.R.L. </p>
+          <p className='p-footer'> Av. Caseros 3039, Piso 2, CP 1264, Parque Patricios, CABA </p>
+        </div>
 
     </div>
   );
