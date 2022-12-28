@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import { Link } from 'react-router-dom';
 import {cleanSearch} from "../redux/actions.js"
-import Footerend from '../components/Footer-end.js';
+import Footerend from '../components/FooterEnd.js';
 import '../components/CSS/results.css';
 
 

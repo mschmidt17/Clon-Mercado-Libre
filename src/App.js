@@ -8,7 +8,7 @@ import BuyProducts from './pages/BuyProducts.js';
 import Navbar from './components/Navbar.js';
 import Footer from './components/Footer.js';
 import './App.css';
-import Footerend from './components/Footer-end.js';
+import Footerend from './components/FooterEnd.js';
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
           <Route exact path='/cart' element={<Cart/>}/>
           <Route exact path='/buy' element={<BuyProducts/>}/>
         </Routes>
-
+      <Footerend/>
     </div>
   );
 }

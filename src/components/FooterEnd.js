@@ -1,7 +1,7 @@
 import React from 'react';
-import './CSS/footerend.css';
+import './CSS/footerEnd.css';
 
-function Footerend() {
+function FooterEnd() {
   return (
     <div className='container-footerend'>
         
@@ -25,4 +25,4 @@ function Footerend() {
   );
 }
 
-export default Footerend;
+export default FooterEnd;
