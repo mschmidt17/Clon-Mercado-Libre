@@ -10,6 +10,7 @@ import Advertising from '../components/Advertising';
 import Discover from '../components/Discover.js';
 import Categories from '../components/Categories.js';
 import Footer from '../components/Footer.js';
+import Footerend from '../components/Footer-end.js';
 
 
 
@@ -41,6 +42,8 @@ function Home() {
         <Offers/>
         <Discover data={interests} title="Te puede interesar"/>
         <Categories/>
+        <Footer/>
+        <Footerend/>
 
     </div>
   );

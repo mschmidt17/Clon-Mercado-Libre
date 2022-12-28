@@ -23,6 +23,8 @@
 .img-results{
     display: flex;
     padding: 2%;
+    max-width: 100%;
+    height: auto;
 }
 
 .container-card-results{

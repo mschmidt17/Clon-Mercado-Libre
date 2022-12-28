@@ -1,0 +1,29 @@
+.container-footerend{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-none{
+    display: flex;
+    width: 78%;
+    font-size: 0.7rem;
+    justify-content: space-evenly;
+    margin: 1.2% 0 0.2% 0;
+    padding: 1% 11% 0 11%;
+    border-top: 0.6px solid #d3d0d0;
+    overflow: hidden;
+}
+
+.footer-end{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.75rem;
+    color:#949191;
+    margin: 0 0 1% 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 72.5%;
+}

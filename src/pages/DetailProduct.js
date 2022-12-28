@@ -24,6 +24,7 @@ function DetailProduct() {
     <div className='container-detail'>
         <h1>{detail.title}</h1>
     </div>
+    
   );
 }
 
