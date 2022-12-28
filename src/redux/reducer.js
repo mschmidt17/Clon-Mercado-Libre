@@ -1,4 +1,4 @@
-import { OFFERS, CATEGORIES, SEARCH_PRODUCT, DETAIL, ADD_PRODUCT, DELETE_PRODUCT, LOADING } from "./actions.js"
+import { OFFERS, CATEGORIES, SEARCH_PRODUCT, DETAIL, ADD_PRODUCT, DELETE_PRODUCT, LOADING, CLEAN_SEARCH } from "./actions.js"
 import hbo from "../assets/HBO.webp";
 import paramount from "../assets/paramount_.jpg";
 import widget from "../assets/Widget.jpg";
@@ -119,6 +119,13 @@ export default function rootReducer(state = initialState, action) {
                 ...state,
                 loading: true
             }
+
+        case CLEAN_SEARCH:
+            return{
+                ...state,
+                searchProduct: [],
+                productDetail: {}
+            } 
 
         default:
             return state

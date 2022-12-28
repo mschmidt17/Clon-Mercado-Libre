@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {IoSearchOutline} from "react-icons/io5"
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -8,6 +8,7 @@ import './CSS/search.css';
 
 function Search () {
     const navigate = useNavigate()
+    const dispatch = useDispatch()
     const [name, setName] = useState("");
     
     const handleInputChange = (e) => {
@@ -16,9 +17,9 @@ function Search () {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        navigate(`/items/?search=${name}`)
+        dispatch(searchProduct(name))
+        navigate(`/results/?search=${name}`)
         setName("")
-
     }
 
     return (

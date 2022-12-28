@@ -8,6 +8,7 @@ export const DELETE_PRODUCT = "DELETE_PRODUCT"
 export const BUY_PRODUCTS = "BUY_PRODUCTS"
 export const LOADING = "LOADING"
 export const CATEGORIES = "CATEGORIES"
+export const CLEAN_SEARCH = "CLEAN_SEARCH"
 
 export function offers() {
     return async function (dispatch) {
@@ -37,12 +38,18 @@ export function searchProduct(title) {
 
       return dispatch({
         type: SEARCH_PRODUCT,
-        payload: result
+        payload: result.results
       })
 
     } catch (error) {
       console.log(error);
     }
+  }
+}
+
+export function cleanSearch() {
+  return{
+    type: CLEAN_SEARCH,
   }
 }
 
