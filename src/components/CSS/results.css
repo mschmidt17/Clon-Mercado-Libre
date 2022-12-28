@@ -1,0 +1,43 @@
+.container-results{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4%;
+    
+}
+
+.results{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-results{
+    display: flex;
+    background-color: white;
+    flex-direction: row;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.178);
+    padding: 3%;
+    color:black;
+}
+
+.img-results{
+    display: flex;
+    padding: 2%;
+}
+
+.container-card-results{
+    display: flex;
+    flex-direction: column;
+    padding-top: 1%;
+}
+
+.title-results{
+    font-size: large;
+}
+
+.price-results{
+    font-weight:500;
+    font-size: larger;
+    margin-top: 8%;
+    letter-spacing: 0.4px;
+}
