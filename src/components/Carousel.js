@@ -1,12 +1,11 @@
 import React from "react";
 import "./CSS/carousel.css";
-import gaming from "../assets/gaming.webp";
+import argentina from "../assets/argentina.webp";
+import ruta from "../assets/ruta.webp";
+import herramientas from "../assets/herramientas.webp";
+import belleza from "../assets/belleza.webp";
 import navidad from "../assets/navidad.webp";
-import navidad1 from "../assets/navidad1.webp";
-import deco from "../assets/deco.webp";
-import tv from "../assets/tv.webp";
-import aire from "../assets/aire.webp";
-
+import notebooks from "../assets/notebooks.webp";
 
 
 
@@ -16,22 +15,22 @@ function Carousel() {
     <div className="slider">
       <ul>
         <li>
-          <img src={navidad}alt="gaming" />
+          <img src={argentina}alt="argentina" />
         </li>
         <li>
-          <img src={navidad1}alt="gaming" />
+          <img src={ruta}alt="ruta" />
         </li>
         <li>
-          <img src={gaming}alt="gaming" />
+            <img src={belleza}alt="belleza"/>
         </li>
         <li>
-            <img src={deco}alt="deco"/>
+          <img src={navidad} alt="navidad" />
         </li>
         <li>
-          <img src={tv} alt="iluminacion" />
+          <img src={notebooks} alt="notebooks" />
         </li>
         <li>
-          <img src={aire} alt="aire" />
+          <img src={herramientas}alt="herramientas" />
         </li>
       </ul>
     </div>
