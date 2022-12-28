@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from "../assets/logo.png";
 import nivel from "../assets/nivel.webp";
-import {CiLocationOn} from "react-icons/ci";
+import {IoLocationOutline} from "react-icons/io5";
 import {BsCart2} from "react-icons/bs";
 import {RiArrowDropDownLine} from "react-icons/ri";
 import { Link } from 'react-router-dom';
@@ -28,7 +28,7 @@ function Navbar() {
 
       <div className='bottom-navbar'>
         <div className='location'>
-          <CiLocationOn style={{"fontSize" : "25px"}}/>
+          <IoLocationOutline style={{"fontSize" : "25px"}}/>
           <a style={{"fontWeight" : "lighter"}}> Enviar a <br></br> <b>Capital Federal</b> </a>
         </div>
 

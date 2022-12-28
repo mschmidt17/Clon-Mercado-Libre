@@ -10,7 +10,7 @@ import Advertising from '../components/Advertising';
 import Discover from '../components/Discover.js';
 import Categories from '../components/Categories.js';
 import Footer from '../components/Footer.js';
-import Footerend from '../components/FooterEnd.js';
+
 
 
 

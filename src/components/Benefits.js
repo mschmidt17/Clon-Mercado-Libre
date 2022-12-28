@@ -19,7 +19,7 @@ function Benefits() {
 
         <div className="benefits-bottom">
             {benefits?.map((benefit) => {return (
-                <div className="benefits" style={{"backgroundImage":`linear-gradient(${benefit.gradient}), url(${benefit.background})`}}>
+                <div className="benefits" key={benefit.id} style={{"backgroundImage":`linear-gradient(${benefit.gradient}), url(${benefit.background})`}}>
                     <img src={benefit.logo} alt="Logo" className='logo-image'/>
                     <div>
                         {benefit.days? <h6>{benefit.days}</h6> : null}

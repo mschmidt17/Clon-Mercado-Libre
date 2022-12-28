@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import { Link } from 'react-router-dom';
 import {cleanSearch} from "../redux/actions.js"
-import Footerend from '../components/FooterEnd.js';
+import publicidad from "../assets/publicidad.jpg";
 import '../components/CSS/results.css';
 
 
@@ -18,28 +18,34 @@ function Results() {
     }, [])
 
     return (
-      <div className='container-results'>
+        <div className='container-results'>
+            <img src={publicidad} alt="publicidad" className='publicidad-results'/>
 
-          <div className="results">
-                {products?.map(result => {
-                return (
-                    <div key={result.id}>
-                        <Link to={`/detail/${result.id}`} style={{"textDecoration":"none"}}>
-                            <div className='card-results'>
-                                <img src={result.thumbnail} width="120" className='img-results'/>
+            <div className='results-filtros'>
+                <div className='results-right'>
+                    ACA VAN LOS FILTROS
+                </div>
 
-                                <div className='container-card-results'>
-                                    <p className='title-results'>{result.title}</p>
-                                    <p className='price-results'> ${result.price}</p>
+                <div className="results">
+                    {products?.map(result => {
+                    return (
+                        <div key={result.id}>
+                            <Link to={`/detail/${result.id}`} style={{"textDecoration":"none"}}>
+                                <div className='card-results'>
+                                    <img src={result.thumbnail} width="120" className='img-results' alt='producto'/>
+
+                                    <div className='container-card-results'>
+                                        <p className='title-results'>{result.title}</p>
+                                        <p className='price-results'> ${result.price}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </Link>
-                    </div>
-                )
-                })}
-
+                            </Link>
+                        </div>
+                    )
+                    })}
+                </div>
             </div>
-      </div>
+        </div>
     );
 }
 

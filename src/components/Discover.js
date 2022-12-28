@@ -13,7 +13,7 @@ function Discover({data, title}) {
       <div className='container-row'>
         {data?.map((e) => {return(
           
-          <div className='discover-card'>
+          <div className='discover-card' key={e.id}>
             <div className='discover-text'>
               <h6 className='discover-cat'> NAVIDAD{e.category} </h6>
               <h2 className='discover-promo'> {e.text} </h2>

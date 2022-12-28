@@ -21,7 +21,8 @@ const initialState = {
             gradient: "to bottom, rgba(0, 0, 0, 0) 55%, rgba(16, 27, 58, 1)",
             text: "Sin cargo con el nivel 6",
             company: "Disney+ y Star+",
-            logo: "https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/disneyplus/comboplus-square.jpg"
+            logo: "https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/disneyplus/comboplus-square.jpg",
+            id: 1
         },
         {
             background: hbo,
@@ -29,7 +30,8 @@ const initialState = {
             days: "7 DIAS GRATIS",
             text: "Hasta 50% OFF",
             company: "HBO Max",
-            logo: "https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/hbomax/logo/logoSquare@2x.png?v=1"
+            logo: "https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/hbomax/logo/logoSquare@2x.png?v=1",
+            id: 2
         },
         {
             background: paramount,
@@ -37,7 +39,8 @@ const initialState = {
             days: "7 DIAS GRATIS",
             text: "Sin cargo con el nivel 6",
             company: "Paramount+",
-            logo: "https://http2.mlstatic.com/resources/frontend/statics/loyal/paramount/logos/paramount-logo-vdp-56-x-56-filled@2x.png"
+            logo: "https://http2.mlstatic.com/resources/frontend/statics/loyal/paramount/logos/paramount-logo-vdp-56-x-56-filled@2x.png",
+            id: 3
         }
     ],
 
@@ -45,12 +48,14 @@ const initialState = {
         {
             category: ": MODA",
             text: "HASTA 40% OFF Y 6X SIN INTERES",
-            image: moda
+            image: moda,
+            id: 1
         },
         {
             category: "",
             text: "HASTA 10% OFF EN LIBROS",
-            image: libro
+            image: libro,
+            id: 2
         },
     ],
 
@@ -58,12 +63,14 @@ const initialState = {
         {
             category: ": BELLEZA",
             text: "HASTA 40% OFF Y 6X SIN INTERES",
-            image: paco
+            image: paco,
+            id: 1
         },
         {
             category: ": GAMING",
             text: "HASTA 25% OFF Y 6X SIN INTERES",
-            image: xbox
+            image: xbox,
+            id: 2
         },
     ],
 
