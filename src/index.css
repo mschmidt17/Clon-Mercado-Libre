@@ -1,8 +1,17 @@
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../src//assets/fonts/Proxima\ Nova\ Alt\ Light.otf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../src/assets/fonts/ProximaNova-Regular.otf');
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Proxima Nova",-apple-system,Roboto,Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #EBEBEB;

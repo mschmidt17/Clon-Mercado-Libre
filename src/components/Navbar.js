@@ -17,19 +17,17 @@ function Navbar() {
       <div className='top-navbar'>
         <div className='logo'>
           <Link to='/'>
-            <img src={logo} width="140" alt="logo"/>
+            <img src={logo} width="135" alt="logo"/>
           </Link>
         </div>
         <Search/>
-        <div className='nivel'>
-          <img src={nivel} width="350" alt="nivel"/>
-        </div>
+        <img src={nivel} width="340" alt="nivel"/>
       </div>
 
       <div className='bottom-navbar'>
         <div className='location'>
-          <IoLocationOutline style={{"fontSize" : "25px"}}/>
-          <a style={{"fontWeight" : "lighter"}}> Enviar a <br></br> <b>Capital Federal</b> </a>
+          <IoLocationOutline className='icon-location'/>
+          <p className='send-to'> Enviar a <br></br> <p className='cap-federal'>Capital Federal</p> </p>
         </div>
 
         <div className='lista'>
@@ -43,16 +41,15 @@ function Navbar() {
         </div>
 
         <div className='cart'>
-          <a> Crea tu cuenta  </a>
-          <a> Ingresa </a>
+          <a> Creá tu cuenta  </a>
+          <a> Ingresá </a>
           <a> Mis compras </a>
-          <Link to='/cart'>
-            <BsCart2/>
+          <Link to='/cart' style={{"textDecoration":"none"}}>
+            <BsCart2 className='icon-cart'/>
           </Link>
         </div>
 
       </div>
-
     </div>
   );
 }
