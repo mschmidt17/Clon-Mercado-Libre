@@ -16,9 +16,9 @@
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+    flex-direction: column;
     margin-right: 4%;
     width: 16rem;
-    background-color: red;
 }
 
 .results{
@@ -60,4 +60,36 @@
     font-size: larger;
     margin-top: 8%;
     letter-spacing: 0.4px;
+}
+
+.imagen-publi{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18rem;
+    overflow: hidden;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.img-public{
+    width: 30rem;
+    border-radius: 4px 4px 0px 0px;
+
+}
+
+.img-oferta{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 18rem;
+    overflow: hidden;
+    margin-top: -5rem;
+    border-radius: 0px 0px 4px 4px;
+}
+
+.imagen-oferta{
+    width: 48rem;
+    border-radius: 0px 0px 4px 4px;
+    
+
 }
