@@ -6,6 +6,7 @@ import publicidad from "../assets/publicidad.jpg";
 import publi from "../assets/publi.jfif";
 import ofertas from "../assets/ofertas.png";
 import '../components/CSS/results.css';
+import ToggleSwitch from "../components/ToggleSwitch";
 
 
 function Results() {
@@ -30,10 +31,17 @@ function Results() {
             <div className='results-filtros'>
                 <div className='results-right'>
                     <h2> {product[0].toUpperCase() + product.substring(1)} </h2>
-                    <p> {products.length} resultados </p>
-                    <div>Llegan hoy ICONO</div>
-                    <div>Full te ahorra envíos ICONO</div>
-                    <div>Envíos gratis ICONO</div>
+                    <p className='results-number'> {products.length} resultados </p>
+
+                    <div className='results-one'>
+                        <ToggleSwitch label="Llegan hoy" />
+                    </div>
+                    <div className='results-two'>
+                        <ToggleSwitch label="Full te ahorra envíos" />
+                    </div>
+                    <div className='results-three'>
+                        <ToggleSwitch label="Envíos gratis" />
+                    </div>
 
                     {products?.map(product => {
                     return (
