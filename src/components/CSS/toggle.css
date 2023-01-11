@@ -1,39 +1,48 @@
 .container-toggle {
-    text-align: center;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  width: 12.5rem;
+  border: 1px solid rgba(153, 152, 152, 0.548);
+  border-radius: 6px;
+  padding: 7% 6%;
+  font-size: smaller;
+  margin-bottom: 3%;
+}
 
-  .toggle-switch {
+.toggle-switch {
     position: relative;
-    width: 75px;
+    width: 2.2rem;
     display: inline-block;
     text-align: left;
-    top: 8px;
-  }
+    top: 2px;
+}
 
-  .checkbox {
+.checkbox {
     display: none;
-  }
+}
 
-  .label {
+.label {
     display: block;
     overflow: hidden;
     cursor: pointer;
     border: 0 solid #bbb;
     border-radius: 20px;
-  }
+}
 
-  .inner {
+.inner {
     display: block;
     width: 200%;
-    margin-left: -100%;
+    margin-left: -20%;
     transition: margin 0.3s ease-in 0s;
-  }
+}
 
-  .inner:before,
-  .inner:after {
+.inner:before,
+.inner:after {
   float: left;
-  width: 45%;
-  height: 30px;
+  width: 31%;
+  height: 1.2rem;
   padding: 0;
   line-height: 36px;
   color: #fff;
@@ -42,15 +51,15 @@
 }
 
 .inner:before {
-  content: "YES";
-  padding-left: 10px;
+  content: "";
+  padding-left: 4px;
   background-color: #3483fa;
   color: #fff;
 }
 
 .inner:after {
-  content: "NO";
-  padding-right: 10px;
+  content: "";
+  padding-right: 4px;
   background-color: #bbb;
   color: #fff;
   text-align: right;
@@ -58,14 +67,13 @@
 
 .switch {
     display: block;
-    width: 24px;
-    margin: 5px;
+    width: 44%;
     background: #fff;
     position: absolute;
     top: 0;
     bottom: 0;
-    right: 40px;
-    border: 0 solid #bbb;
+    right: 16px;
+    border: 1.5px solid #bbb;
     border-radius: 20px;
     transition: all 0.3s ease-in 0s;
   }

@@ -31,21 +31,16 @@ function Results() {
             <div className='results-filtros'>
                 <div className='results-right'>
                     <h2> {product[0].toUpperCase() + product.substring(1)} </h2>
-                    <p className='results-number'> {products.length} resultados </p>
+                    <p className='results-number'> {(Math.random()*100).toFixed(3)} resultados </p>
 
-                    <div className='results-one'>
-                        <ToggleSwitch label="Llegan hoy" />
-                    </div>
-                    <div className='results-two'>
-                        <ToggleSwitch label="Full te ahorra envíos" />
-                    </div>
-                    <div className='results-three'>
-                        <ToggleSwitch label="Envíos gratis" />
-                    </div>
+                    <ToggleSwitch label="Llegan hoy" />
+                    <ToggleSwitch label="Full te ahorra envíos" />
+                    <ToggleSwitch label="Envíos gratis" />
 
-                    {products?.map(product => {
+                    <h4>Ubicación</h4>
+                    {products?.slice(0, 12).map(product => {
                     return (
-                        <p key={product.id}> {product.address.city_name.slice(0, 20)} </p>
+                        <p key={product.id}> {product.address.city_name} </p>
                     )
                     })}
 

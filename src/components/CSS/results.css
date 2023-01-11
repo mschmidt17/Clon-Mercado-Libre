@@ -96,39 +96,3 @@
     margin-top: -8%;
     margin-bottom: 18%;
 }
-
-.results-one{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    height: 2.5rem;
-    width: 14rem;
-    border: 1px solid rgba(128, 128, 128, 0.548);
-    border-radius: 4px;
-}
-
-.results-two{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    height: 3.5rem;
-    width: 14rem;
-    border: 1px solid rgba(128, 128, 128, 0.548);
-    border-radius: 4px;
-    margin-top: 3%;
-}
-
-.results-three{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    height: 2.5rem;
-    width: 14rem;
-    border: 1px solid rgba(128, 128, 128, 0.548);
-    border-radius: 4px;
-    margin-top: 3%;
-
-}
