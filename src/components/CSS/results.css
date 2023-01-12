@@ -37,16 +37,6 @@
     padding: 1% 0;
 }
 
-.fav-icon{
-    display: none;
-}
-
-.card-results:hover .fav-icon{
-    display: flex;
-    position: relative;
-    left: 4%;
-}
-
 .img-results{
     display: flex;
     padding: 2% 3%;

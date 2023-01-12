@@ -1,0 +1,41 @@
+.container-detail{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.supermarket-detail{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: white;
+    width: 100%;
+    height: 136px;
+}
+
+.supermarket-title{
+    display: flex;
+    align-items: center;
+    margin-right: 10rem;
+}
+
+.img-supermarket{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.img-detail{
+    display: flex;
+    margin: 16%;
+    background-color: white;
+}
+
+.text-image{
+    display: flex;
+    
+
+}
