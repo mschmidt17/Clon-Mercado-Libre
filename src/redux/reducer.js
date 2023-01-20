@@ -6,6 +6,13 @@ import moda from "../assets/zapatos.webp";
 import libro from "../assets/libro.webp";
 import xbox from "../assets/juego.webp";
 import paco from "../assets/paco.webp";
+import ofertas2 from "../assets/ofertas2.png";
+import personal from "../assets/personal.png";
+import bebes from "../assets/bebes.png";
+import limpieza from "../assets/limpieza.png";
+import bebidas from "../assets/bebidas.png";
+import almacen from "../assets/almacen.png";
+import mascotas from "../assets/mascotas.png";
 
 
 
@@ -72,6 +79,44 @@ const initialState = {
             image: xbox,
             id: 2
         },
+    ],
+    supermarket: [
+        {
+            text: "Ofertas",
+            image: ofertas2,
+            id: 1
+        },
+        {
+            text: "Cuidado Personal",
+            image: personal,
+            id: 2
+        },
+        {
+            text: "Bebes",
+            image: bebes,
+            id: 3
+        },
+        {
+            text: "Limpieza",
+            image: limpieza,
+            id: 4
+        },
+        {
+            text: "Bebidas",
+            image: bebidas,
+            id: 5
+        },
+        {
+            text: "Almacen",
+            image: almacen,
+            id: 6
+        },
+        {
+            text: "Mascotas",
+            image: mascotas,
+            id: 7
+        },
+
     ],
 
     loading: false,

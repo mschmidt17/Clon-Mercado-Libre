@@ -1,10 +1,3 @@
-.container-detail{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
 .supermarket-detail{
     display: flex;
     align-items: center;
@@ -36,8 +29,4 @@
 
 .text-image{
     display: flex;
-}
-
-.detail-description{
-    
 }
