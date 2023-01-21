@@ -1,43 +1,277 @@
-.container-detail{
+.container-detail {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.supermarket-detail{
+.product-detail{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
     background-color: white;
-    width: 100%;
-    height: 136px;
+    margin: 2% 0;
+    padding: 0.5%;
 }
 
-.supermarket-title{
+.detail-right{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+}
+
+.detail-left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 52rem;
+}
+
+.detail-left-top{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container-tumbnails{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.thumbnail-detail{
+    padding: 4% 0;
+    border-radius: 4px;
+    border: 0.5px solid rgb(180, 179, 179);
+}
+
+.thumbnail-detail:hover{
+    border: 2px solid blue;
+}
+
+.picture-detail{
+    padding: 2%;
+}
+
+.container-details{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding-top: 5%;
+}
+
+.detail-right-shipping, .detail-right-seller, .detail-right-payment {
+    display: flex;
+    flex-direction: column;
+    border: 0.5px solid rgba(184, 179, 179, 0.514);
+    border-radius: 7px;
+    padding: 5%;
+    margin: 2%;
+}
+
+.detail-send{
     display: flex;
     align-items: center;
-    margin-right: 10rem;
+    color: #23B268;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 5% 0 2% 0;
 }
 
-.img-supermarket{
+.detail-time{
+    font-weight: lighter;
+    font-size: 0.9rem;
+    color: rgba(0,0,0,.55);
+    margin-left: 12%;
+}
+
+.icon-truck{
+    font-size: 1.3rem;
+    margin-right: 4%;
+}
+
+.detail-location{
+    color: #2a78ec;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin: 1.5% 0 0 12%;
+}
+
+.detail-stock{
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 10% 0;
+}
+
+.detail-quantity{
+    display: flex;
+    margin: 5% 0 14% 0;
+    color: rgba(0, 0, 0, 0.74);
+}
+
+.detail-quantity select{
+    border: none;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.74);
+    font-weight: bolder;
+}
+
+.available{
+    font-size: 0.8rem;
+    color: rgba(0,0,0,.55);
+}
+
+.btn-buy, .btn-cart{
+    background: #3876d4f1;
+    padding: 5% 2%;
+    margin: 1.4% 0;
+    width: 17rem;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-buy:hover{
+    background-color: #236ad3 ;
+}
+
+.btn-cart{
+    background: #D9E7FA;
+    color: #3876d4f1;
+}
+
+.detail-point {
+    color: #2a78ec;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin: 8% 0 4% 0;
+    display: flex;
+    align-items: center;
+}
+
+.icon-trophy{
+    font-size: 1.3rem;
+    color: rgb(65, 62, 62);
+    margin-right: 2%;
+}
+
+.detail-information {
+    color: rgba(0, 0, 0, 0.788);
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 6% 0 2% 0;
+}
+
+.detail-seller-location{
+    color: rgba(0, 0, 0, 0.788);
+    display: flex;
+    align-items: center;
+    margin: 8% 0 1% 0;
+}
+
+.location-icon{
+    font-size: 1.3rem;
+    margin-right: 3%;
+}
+
+.detail-platinum{
+    display: flex;
+    align-items: center;
+    color: #23B268;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 8% 0 1% 0;
+}
+
+.detail-site{
+    font-weight: lighter;
+    color: rgba(0,0,0,.55);
+    font-size:  0.9rem;
+    margin-left: 11%;
+}
+
+.seller-calification-container {
+    display: flex;
+    width: 98%;
+    justify-content: space-between;
+    padding: 1% 0 0 1%;
+    align-items: center;
+}
+
+.seller-calification{
+    list-style: none;
+    background-color: #39B54A;
+    height: 0.5rem;
+    width: 3rem;
+}
+
+.seller-data{
+    display: flex;
+    width: 96%;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 0 0 2%;
+    margin: 0;
+}
+
+.seller-data-item, .seller-data-item-middle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 0 2%;
+    text-align: center;
+}
+
+.seller-data-item-middle{
+    border-right: 0.5px solid rgba(128, 128, 128, 0.384);
+    border-left: 0.5px solid rgba(128, 128, 128, 0.384);
+}
+
+.seller-data-item p, .seller-data-item-middle p{
+    font-size: 0.7rem;
+    margin-top: 10%;
+    font-weight: lighter;
+    color: rgba(0, 0, 0, 0.788);
+}
+
+.seller-data-item h2{
+    margin: -2% 0 0 0;
+    font-weight: lighter;
+}
+
+.detail-payment{
+    color: rgba(0,0,0,.9);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.detail-credit{
+    font-weight: lighter;
+    margin: 6% 0 2% 0;
+}
+
+.payment-type{
+    margin: 8% 0 1% 0;
+    color: rgba(0, 0, 0, 0.733);
+}
+
+.credit-contatiner, .efectivo-container{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: column;
+    margin: 2% 0;
+    width: 95%;
 }
 
-.img-detail{
-    display: flex;
-    margin: 16%;
-    background-color: white;
+.efectivo-container{
+    width: 40%;
 }
 
-.text-image{
-    display: flex;
-}
-
-.detail-description{
-    
+.detail-date{
+    color: #2a78ec;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin: 8% 0 2% 0;
 }
