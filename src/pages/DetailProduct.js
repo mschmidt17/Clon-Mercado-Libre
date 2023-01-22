@@ -5,9 +5,11 @@ import { verDetail } from '../redux/actions.js';
 import {cleanSearch} from "../redux/actions.js";
 import Supermarket from "../components/Supermarket.js"
 import {IoLocationOutline} from "react-icons/io5";
+import{GrFavorite} from "react-icons/gr"
 import {BsTruck} from "react-icons/bs"
 import {CiTrophy} from "react-icons/ci"
 import '../components/CSS/detail.css';
+import Advertising from '../components/Advertising.js';
 
 
 
@@ -42,20 +44,21 @@ function DetailProduct() {
                 <img src={image} alt="producto" className='picture-detail'/> 
               </div>
               <div className='container-details'>
+                <GrFavorite className='heart-icon'/>
                 <h3>{detail.title}</h3>
-                {detail.price !== detail.original_price ? 
+                {detail.original_price && detail.price !== detail.original_price ? 
                 <div>
                   <del>$ {detail.original_price}</del> 
-                  <div>
-                    <p>$ {detail.price}</p>
+                  <div className='detail-price'>
+                    <h2>$ {detail.price.toFixed(2)}</h2>
                     <p> {Math.round((detail.original_price - detail.price) / detail.original_price * 100)}% OFF</p>
                   </div>
                 </div>
                 : 
-                <p>$ {detail.price}</p>}
+                <h2>$ {detail.price}</h2>}
                 
                 <p>en 6x $ {(detail.price/6).toFixed(2)}</p>
-                <p className='detail-point'>Ver los medios de pago</p>
+                <h6 className='detail-point'>Ver los medios de pago</h6>
               </div>
             </div>
 
@@ -71,7 +74,7 @@ function DetailProduct() {
                     </thead>
                     <tbody>
                       <tr >
-                        <td> {a.value_name} </td>
+                        <td> {a.value_name ? a.value_name : "-"} </td>
                       </tr>
                     </tbody>
                   </table>
@@ -175,6 +178,8 @@ function DetailProduct() {
           </div>
 
         </div>
+
+        <Advertising/>
     </div>
     
   );
