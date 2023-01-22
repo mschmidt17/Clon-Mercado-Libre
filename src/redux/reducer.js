@@ -21,6 +21,7 @@ const initialState = {
     categories: [],
     searchProduct: [],
     productDetail: {},
+    imageDetail: "",
     cart: [],
     benefits: [
         {
@@ -150,7 +151,8 @@ export default function rootReducer(state = initialState, action) {
         case DETAIL:
             return {
                 ...state,
-                productDetail: action.payload
+                productDetail: action.payload,
+                imageDetail: action.payload.pictures[0]?.url
             }
 
         case ADD_PRODUCT:
@@ -176,7 +178,8 @@ export default function rootReducer(state = initialState, action) {
             return{
                 ...state,
                 searchProduct: [],
-                productDetail: {}
+                productDetail: {},
+                imageDetail: ""
             } 
 
         default:

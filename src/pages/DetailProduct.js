@@ -16,17 +16,12 @@ function DetailProduct() {
   const { id } = useParams()
   const isLoading = useSelector((state) => state.loading)
   const detail = useSelector((state) => state.productDetail)
-  const [image, setImage] = useState("")
-  const [seller, setSeller] = useState("")
-
-
+  const image = useSelector((state) => state.imageDetail)
+  
   useEffect(() => {
     dispatch(verDetail(id))
-    console.log("soy el detalle", detail)
     return () => {                        
       dispatch(cleanSearch())
-      setImage(detail?.pictures[0]?.url)
-      setSeller(detail?.seller_address?.city?.name + ", " + detail?.seller_address?.state?.name)
     };
   }, [])
   
@@ -43,7 +38,7 @@ function DetailProduct() {
                   return <img src={p.url} key={p.id} alt="pic" width="50" className='thumbnail-detail'/>
                 })}
               </div>
-              <img src={image} width="400" alt="producto" className='picture-detail'/>
+              <img src={image} width="400" alt="producto" className='picture-detail'/> 
               <div className='container-details'>
                 <h3>{detail.title}</h3>
                 <p>$ {detail.price}</p>
@@ -109,7 +104,7 @@ function DetailProduct() {
             <div className='detail-right-seller'>
               <p className='detail-information'>Información sobre el vendedor</p>
               <p className='detail-seller-location'> <IoLocationOutline className='location-icon'/> Ubicación </p>
-              <p className='detail-site'>{seller}</p>
+              <p className='detail-site'>{detail?.seller_address?.city?.name + ", " + detail?.seller_address?.state?.name}</p>
               <p className='detail-platinum'><img src="https://http2.mlstatic.com/frontend-assets/vpp-frontend/medal.svg" alt="medal" style={{"marginRight":"3%"}}/>MercadoLíder Platinum</p>
               <p className='detail-site'>¡Es uno de los mejores del sitio!</p>
               <ul className='seller-calification-container'>

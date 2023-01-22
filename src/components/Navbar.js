@@ -27,7 +27,10 @@ function Navbar() {
       <div className='bottom-navbar'>
         <div className='location'>
           <IoLocationOutline className='icon-location'/>
-          <p className='send-to'> Enviar a <br></br> <p className='cap-federal'>Capital Federal</p> </p>
+          <div>
+            <p className='send-to'> Enviar a </p>
+            <p className='cap-federal'>Capital Federal</p>
+          </div>
         </div>
 
         <div className='lista'>

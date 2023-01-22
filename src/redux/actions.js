@@ -58,11 +58,11 @@ export function verDetail(id) {
       dispatch(loading())
       try {
         const URL = `https://api.mercadolibre.com/items/${id}`
-        const { data: result } = await axios.get(URL)
+        const result = await axios.get(URL)
   
         return dispatch({
           type: DETAIL,
-          payload: result
+          payload: result.data
         })
   
       } catch (error) {
