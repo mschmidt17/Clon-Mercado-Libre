@@ -15,7 +15,6 @@ function Results() {
     const products = useSelector((state) => state.searchProduct)
     const [params] = useSearchParams()
     const product = params.get('search') ?? "";
-    console.log(products)
 
     useEffect(() => {
         return () => {                        
@@ -37,14 +36,52 @@ function Results() {
                     <ToggleSwitch label="Llegan hoy" />
                     <ToggleSwitch label="Full te ahorra envíos" />
                     <ToggleSwitch label="Envíos gratis" />
+                    
+                    <div>
+                        <h4>Tiempo de entrega</h4>
+                        <p className="results-city"> Llega en menos de 24 horas</p>
+                    </div>
 
-                    <h4>Ubicación</h4>
-                    {products?.slice(0, 12).map(product => {
-                    return (
-                        <p className="results-city" key={product.id}> {product.address.city_name} </p>
-                    )
-                    })}
-                    <p className="results-show-more"> Mostrar más </p>
+                    <div>
+                        <h4>Marca</h4>
+                        {products?.slice(0, 12).map(product => {
+                        return (
+                            <p className="results-city" key={product.id}> {product.attributes[0].value_name} </p>
+                        )
+                        })}
+                        <p className="results-show-more"> Mostrar más </p>
+                    </div>
+
+                    <div>
+                        <h4>Costo de envío</h4>
+                        <p className="results-city"> Gratis </p>
+                    </div>
+
+                    <div>
+                        <h4>Ubicación</h4>
+                        {products?.slice(0, 12).map(product => {
+                        return (
+                            <p className="results-city" key={product.id}> {product.address.city_name} </p>
+                        )
+                        })}
+                        <p className="results-show-more"> Mostrar más </p>
+                    </div>
+
+                    <div>
+                        <h4>Descuentos</h4>
+                        <p className="results-off"> Desde 5% OFF </p>
+                        <p className="results-off"> Desde 10% OFF </p>
+                        <p className="results-off"> Desde 15% OFF </p>
+                        <p className="results-off"> Desde 20% OFF </p>
+                        <p className="results-off"> Desde 25% OFF </p>
+                        <p className="results-off"> Desde 30% OFF </p>
+                        <p className="results-off"> Desde 40% OFF </p>
+                    </div>
+
+                    <div>
+                        <h4>Tiendas oficiales</h4>
+                        <p className="results-city">Solo tiendas oficiales</p>
+                    </div>
 
                     <div className='imagen-publi'>
                         <img src={publi} alt='Oferta' className='img-public'/>
@@ -54,7 +91,6 @@ function Results() {
                         <img src={ofertas} alt='Oferta' className='imagen-oferta'/>
                     </div>
 
-                
                 </div>
 
                 <div className="results">

@@ -17,14 +17,20 @@
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
-    margin: 0 2.5%;
+    margin: 0 2.5% 0 0;
     width: 17rem;
+}
+
+.results-left h4{
+    margin-bottom: 6%;
+    color: rgb(68, 68, 68);
 }
 
 .results{
     display: flex;
     flex-direction: column;
-    width: 56rem;
+    width: 59.4rem;
+    padding-right: 3%;
 }
 
 .card-results{
@@ -73,11 +79,15 @@
     margin-top: 3%;
 }
 
-.results-city, .results-show-more{
+.results-city, .results-show-more, .results-off{
     color: grey;
     margin: 2% 0;
     font-size: 0.8rem;
     letter-spacing: 0.5px;
+}
+
+.results-off{
+    margin: 4% 0;
 }
 
 .results-show-more{
