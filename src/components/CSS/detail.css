@@ -10,6 +10,8 @@
     background-color: white;
     margin: 2% 0;
     padding: 0.5%;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px 1px rgba(128, 128, 128, 0.185);
 }
 
 .detail-right{
@@ -34,28 +36,133 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    margin: 1% 0 0 1%;
 }
 
 .thumbnail-detail{
-    padding: 4% 0;
+    padding: 6% 8%;
     border-radius: 4px;
     border: 0.5px solid rgb(180, 179, 179);
+    margin: 10% 0;
 }
 
 .thumbnail-detail:hover{
     border: 2px solid blue;
 }
 
+.detail-container-imagen{
+    width: 26rem;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+}
+
 .picture-detail{
-    padding: 2%;
+    max-width: 90%;
+    max-height: 90%;
 }
 
 .container-details{
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 45%;
     padding-top: 5%;
+}
+
+.container-details h3 {
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 4%;
+}
+
+.detail-left-table, .detail-left-bottom{
+    border-top: 1px solid rgba(128, 128, 128, 0.37);
+    width: 90%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 2% 5%;
+    padding: 2% 0;
+}
+
+.detail-left-table div{
+    border: 0.5px solid #EBEBEB;
+    border-radius: 6px;
+    width: 100%;
+    margin: 2% 0;
+}
+
+.detail-left-table h3{
+    font-size: 1.5rem;
+    letter-spacing: 0.6px;
+    margin: 3% 0;
+    color: rgb(61, 61, 61);
+    font-weight: 500;
+}
+
+table {
+    display: flex;
+}
+
+thead{
+    border-collapse: collapse;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+table:nth-child(even) thead{
+    background-color: #F5F5F5;
+}
+
+table:nth-child(odd) thead{
+    background-color: #EBEBEB;
+}
+
+th {
+    display: flex;
+    width: 19rem;
+    padding: 5.5% 5%;
+    color: rgb(61, 61, 61);
+}
+
+td{
+    color: rgb(80, 79, 79);
+}
+
+tbody{
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+}
+
+.detail-left-bottom{
+    border-top: none;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.37);
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.detail-left-bottom h3{
+    letter-spacing: 0.4px;
+    color: rgb(61, 61, 61);
+    font-weight: 500;
+    margin-bottom: 1%;
+}
+
+.contanier-other-details{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contanier-other-details p {
+    width: 50%;
+    font-size: 0.9rem;
+    margin: 1% 0;
+    color: rgb(77, 75, 75);
 }
 
 .detail-right-shipping, .detail-right-seller, .detail-right-payment {

@@ -35,42 +35,57 @@ function DetailProduct() {
             <div className='detail-left-top'>
               <div className='container-tumbnails'>
                 {detail.pictures?.slice(0, 8).map((p) => {
-                  return <img src={p.url} key={p.id} alt="pic" width="50" className='thumbnail-detail'/>
+                  return <img src={p.url} key={p.id} alt="pic" width="40" className='thumbnail-detail'/>
                 })}
               </div>
-              <img src={image} width="400" alt="producto" className='picture-detail'/> 
+              <div className='detail-container-imagen'>
+                <img src={image} alt="producto" className='picture-detail'/> 
+              </div>
               <div className='container-details'>
                 <h3>{detail.title}</h3>
-                <p>$ {detail.price}</p>
+                {detail.price !== detail.original_price ? 
+                <div>
+                  <del>$ {detail.original_price}</del> 
+                  <div>
+                    <p>$ {detail.price}</p>
+                    <p> {Math.round((detail.original_price - detail.price) / detail.original_price * 100)}% OFF</p>
+                  </div>
+                </div>
+                : 
+                <p>$ {detail.price}</p>}
+                
                 <p>en 6x $ {(detail.price/6).toFixed(2)}</p>
-                <p>Ver los medios de pago</p>
+                <p className='detail-point'>Ver los medios de pago</p>
               </div>
             </div>
 
             <div className='detail-left-table'>
               <h3> Caracteristicas principales </h3>
-              <table>
-                <thead>
-                  <tr className='table-header'>
-                    <th className='columna-header'> </th>
-                    <th className='columna-header'> </th>
-                    <th className='columna-header'> </th>
-                    <th className='columna-header'> </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr >
-                    <td className='columna-respuesta'> {} </td>
-                    <td className='columna-respuesta'> {} </td>
-                    <td className='columna-respuesta'> {} </td>
-                    <td className='columna-respuesta'> {} </td>
-                  </tr>
-                </tbody>
-              </table>
+              <div>
+                {detail?.attributes?.slice(0, 5).map((a) => {return(
+                  <table key={a.value_id}>
+                    <thead>
+                      <tr>
+                        <th> {a.name} </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr >
+                        <td> {a.value_name} </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                )})}
+              </div>
             </div>
 
             <div className='detail-left-bottom'>
-              <h3>Otros</h3>
+              <h3>Otras características</h3>
+              <div className='contanier-other-details'>
+                {detail?.attributes?.slice(5, detail.attributes.length - 1).map((a) => {return(
+                  <p key={a.value_id}><b>{a.name}:</b> {a.value_name}</p>
+                )})}
+              </div>
             </div>
           </div>
 
