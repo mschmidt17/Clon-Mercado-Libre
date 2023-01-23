@@ -4,7 +4,7 @@ import argentina from "../assets/argentina.webp";
 import ruta from "../assets/ruta.webp";
 import herramientas from "../assets/herramientas.webp";
 import belleza from "../assets/belleza.webp";
-import navidad from "../assets/navidad.webp";
+import ofertas from "../assets/ofertas.webp";
 import notebooks from "../assets/notebooks.webp";
 
 
@@ -24,7 +24,7 @@ function Carousel() {
             <img src={belleza}alt="belleza"/>
         </li>
         <li>
-          <img src={navidad} alt="navidad" />
+          <img src={ofertas} alt="ofertas" />
         </li>
         <li>
           <img src={notebooks} alt="notebooks" />
