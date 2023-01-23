@@ -10,8 +10,8 @@
 
 .category-top{
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
     width: 75%;
 }
 
@@ -22,6 +22,29 @@
     color: #727272;
 }
 
+.botones{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 4rem;
+}
+
+.category-btn{
+    background-color: rgba(128, 128, 128, 0.678);
+    border: none;
+    height: 0.3rem;
+    width: 0.3rem;
+    border-radius: 100px;
+    margin: 0 1%;
+    padding: 0;
+}
+
+.active{
+    background-color: #3483FA;
+    height: 0.5rem;
+    width: 0.5rem;
+}
+
 .categories{
     display: grid;
     grid-template-columns: 170px 170px 170px 170px 170px 170px 170px 170px 170px 170px 170px 170px 170px 170px 170px 170px;
@@ -30,6 +53,7 @@
     overflow: hidden;
     position: relative;
     left: 0;
+    border-radius: 6px;
 }
 
 .start{
@@ -51,13 +75,22 @@
     height: 170px;
     align-items: center;
     justify-content: center;
-    border: 0.1px solid rgba(168, 167, 167, 0.479);
+    border: 0.1px solid rgba(209, 208, 208, 0.479);
 }
 
-.icon-example{
+.category-card:hover {
+    background-color: #3483FA;
+}
+
+.category-card:hover .category-icon, .category-card:hover .category-name {
+    color: white;
+}
+
+.category-icon{
     font-size: 3rem;
-    color: rgba(81, 144, 240, 0.911);
+    color: #3483FA;
     padding-bottom: 8%;
+    stroke-width: 1px;
 }
 
 .category-name{

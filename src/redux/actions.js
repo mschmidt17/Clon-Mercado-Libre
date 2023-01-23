@@ -7,7 +7,6 @@ export const ADD_PRODUCT = "ADD_PRODUCT"
 export const DELETE_PRODUCT = "DELETE_PRODUCT"
 export const BUY_PRODUCTS = "BUY_PRODUCTS"
 export const LOADING = "LOADING"
-export const CATEGORIES = "CATEGORIES"
 export const CLEAN_SEARCH = "CLEAN_SEARCH"
 
 export function offers() {
@@ -85,24 +84,6 @@ export function deleteProduct(payload) {
     payload
   }
 }
-
-export function categories() {
-    return async function (dispatch) {
-      dispatch(loading())
-      try {
-        const URL = `https://api.mercadolibre.com/sites/MLA/categories`
-        const { data: result } = await axios.get(URL)
-  
-        return dispatch({
-          type: CATEGORIES,
-          payload: result
-        })
-  
-      } catch (error) {
-        console.log(error);
-      }
-    }
-  }
 
 export function loading() {
   return {

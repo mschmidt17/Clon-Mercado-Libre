@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import {offers, categories} from '../redux/actions.js';
+import {offers} from '../redux/actions.js';
 import Carousel from '../components/Carousel.js';
 import Payments from '../components/Payments.js';
 import Offers from '../components/Offers.js';
@@ -26,7 +26,6 @@ function Home() {
 
   useEffect(() => {
     dispatch(offers());
-    dispatch(categories());
   }, [])
 
   return (
