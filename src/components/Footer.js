@@ -53,7 +53,7 @@ function Footer() {
       <div className='footer-insurance'>
         <img src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/insurance/ssnlogo.svg" alt="insurance" className="icon-ssn" width="300"/>
         <img src="https://http2.mlstatic.com/resources/sell/banner_usuarios_financieros.svg" alt="user" className="icon-ssn"/>
-        <img src="" alt="user" className="icon-ssn"/>
+        <img src="https://http2.mlstatic.com/frontend-assets/homes-palpatine/data_fiscal.png" alt="user" className="icon-ssn"/>
       </div>
 
     </div>
