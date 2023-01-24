@@ -1,19 +1,18 @@
 import React from "react";
-import {useSelector } from "react-redux";
 import { Link } from 'react-router-dom';
 import Card from "./Card.js";
 import './CSS/offers.css';
 
 
-export default function Offers() {
+export default function Offers({title, listOffers}) {
 
-    const listOffers = useSelector((state) => state.offers)
+   
 
     return (
 
         <div className="offers-container">
             <div className="offers-top">
-                <h2 className="offers-title"> Ofertas </h2>
+                <h2 className="offers-title"> {title} </h2>
                 <p className="offers-seeAll"> Ver todas </p>
             </div>
             

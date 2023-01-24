@@ -15,7 +15,7 @@ export function offers() {
         try {
             const URL = `https://api.mercadolibre.com/sites/MLA/search?q=ofertas`
             const { data: result } = await axios.get(URL)
-            const offers = result.results?.sort(() => 0.5 - Math.random()).slice(0, 5)
+            const offers = result.results?.sort(() => 0.5 - Math.random()).slice(0, 10)
 
             return dispatch({
                 type: OFFERS,

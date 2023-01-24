@@ -22,6 +22,7 @@ function Home() {
   const isLoading = useSelector((state) => state.loading)
   const discover = useSelector((state) => state.discover);
   const interests = useSelector((state) => state.interests);
+  const listOffers = useSelector((state) => state.offers)
 
 
   useEffect(() => {
@@ -33,12 +34,12 @@ function Home() {
     <div className='container-home'>
         <Carousel/>
         <Payments/>
-        <Offers/>
+        <Offers title="Ofertas" listOffers={listOffers.slice(0, 5)}/>
         <Subscription/>
         <Benefits/>
         <Advertising/>
         <Discover data={discover} title="Descubrí"/>
-        <Offers/>
+        <Offers title="Mas vendidos" listOffers={listOffers.slice(5, 10)}/>
         <Discover data={interests} title="Te puede interesar"/>
         <Categories/>
         <Footer/>
