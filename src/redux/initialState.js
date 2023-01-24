@@ -23,55 +23,10 @@ import {FiMonitor} from "react-icons/fi";
 const initialState = {
     offers: [],
     categories: [
-        {
-            "id": "MLA1743",
-            "name": "Autos, Motos y Otros",
-            "icon": <IoCarOutline className="category-icon"/>
-        },
-        {
-            "id": "MLA5725",
-            "name": "Accesorios para Vehículos",
-            "icon": <GiSteeringWheel className="category-icon"/>
-          },
-          {
-            "id": "MLA1512",
-            "name": "Agro",
-            "icon": <TbTractor className="category-icon"/>
-          },
-          {
-            "id": "MLA1403",
-            "name": "Alimentos y Bebidas",
-            "icon": <IoFastFoodOutline className="category-icon"/>
-          },
           {
             "id": "MLA1071",
             "name": "Animales y Mascotas",
             "icon": <TbBone className="category-icon"/>
-          },
-          {
-            "id": "MLA1367",
-            "name": "Antigüedades y Colecciones",
-            "icon": <TbHourglassLow className="category-icon"/>
-          },
-          {
-            "id": "MLA1368",
-            "name": "Arte, Librería y Mercería",
-            "icon": <TbPalette className="category-icon"/>
-          },
-          {
-            "id": "MLA1384",
-            "name": "Bebés",
-            "icon": <TbBabyCarriage className="category-icon"/>
-          },
-          {
-            "id": "MLA1246",
-            "name": "Belleza y Cuidado Personal",
-            "icon": <GiDelicatePerfume className="category-icon"/>
-          },
-          {
-            "id": "MLA1039",
-            "name": "Cámaras y Accesorios",
-            "icon": <TbCamera className="category-icon"/>
           },
           {
             "id": "MLA1051",
@@ -84,6 +39,26 @@ const initialState = {
             "icon": <FiMonitor className="category-icon"/>
           },
           {
+            "id": "MLA1384",
+            "name": "Bebés",
+            "icon": <TbBabyCarriage className="category-icon"/>
+          },
+          {
+            "id": "MLA1039",
+            "name": "Cámaras y Accesorios",
+            "icon": <TbCamera className="category-icon"/>
+          },
+          {
+            "id": "MLA1367",
+            "name": "Antigüedades y Colecciones",
+            "icon": <TbHourglassLow className="category-icon"/>
+          },
+          {
+            "id": "MLA1368",
+            "name": "Arte, Librería y Mercería",
+            "icon": <TbPalette className="category-icon"/>
+          },
+          {
             "id": "MLA1144",
             "name": "Consolas y Videojuegos",
             "icon": <IoGameControllerOutline className="category-icon"/>
@@ -92,6 +67,36 @@ const initialState = {
             "id": "MLA1500",
             "name": "Construcción",
             "icon": <IoConstructOutline className="category-icon"/>
+          },
+          {
+            "id": "MLA1743",
+            "name": "Autos, Motos y Otros",
+            "icon": <IoCarOutline className="category-icon"/>
+          },
+          {
+            "id": "MLA5725",
+            "name": "Accesorios para Vehículos",
+            "icon": <GiSteeringWheel className="category-icon"/>
+          },
+          {
+            "id": "MLA1512",
+            "name": "Agro",
+            "icon": <TbTractor className="category-icon"/>
+          },
+          {
+            "id": "MLA1182",
+            "name": "Instrumentos Musicales",
+            "icon": <FaGuitar className="category-icon"/>
+          },
+          {
+            "id": "MLA1246",
+            "name": "Belleza y Cuidado Personal",
+            "icon": <GiDelicatePerfume className="category-icon"/>
+          },
+          {
+            "id": "MLA407134",
+            "name": "Herramientas",
+            "icon": <AiOutlineTool className="category-icon"/>
           },
           {
             "id": "MLA1276",
@@ -114,19 +119,9 @@ const initialState = {
             "icon": <HiOutlineTicket className="category-icon"/>
           },
           {
-            "id": "MLA407134",
-            "name": "Herramientas",
-            "icon": <AiOutlineTool className="category-icon"/>
-          },
-          {
             "id": "MLA1574",
             "name": "Hogar, Muebles y Jardín",
             "icon": <TbArmchair className="category-icon"/>
-          },
-          {
-            "id": "MLA1499",
-            "name": "Industrias y Oficinas",
-            "icon": <GiOfficeChair className="category-icon"/>
           },
           {
             "id": "MLA1459",
@@ -134,9 +129,19 @@ const initialState = {
             "icon": <HiOutlineBuildingOffice2 className="category-icon"/>
           },
           {
-            "id": "MLA1182",
-            "name": "Instrumentos Musicales",
-            "icon": <FaGuitar className="category-icon"/>
+            "id": "MLA1430",
+            "name": "Ropa y Accesorios",
+            "icon": <TbShirt className="category-icon"/>
+          },
+          {
+            "id": "MLA1168",
+            "name": "Música, Películas y Series",
+            "icon": <TbMusic className="category-icon"/>
+          },
+          {
+            "id": "MLA1499",
+            "name": "Industrias y Oficinas",
+            "icon": <GiOfficeChair className="category-icon"/>
           },
           {
             "id": "MLA3937",
@@ -154,16 +159,6 @@ const initialState = {
             "icon": <HiOutlineBookOpen className="category-icon"/>
           },
           {
-            "id": "MLA1168",
-            "name": "Música, Películas y Series",
-            "icon": <TbMusic className="category-icon"/>
-          },
-          {
-            "id": "MLA1430",
-            "name": "Ropa y Accesorios",
-            "icon": <TbShirt className="category-icon"/>
-          },
-          {
             "id": "MLA409431",
             "name": "Salud y Equipamiento Médico",
             "icon": <HiOutlinePlusCircle className="category-icon"/>
@@ -179,10 +174,15 @@ const initialState = {
             "icon": <IoBalloonOutline className="category-icon"/>
           },
           {
+            "id": "MLA1403",
+            "name": "Alimentos y Bebidas",
+            "icon": <IoFastFoodOutline className="category-icon"/>
+          },
+          {
             "id": "MLA1953",
             "name": "Otras categorías",
             "icon": <HiOutlineSquares2X2 className="category-icon"/>
-          }
+          },
     ],
     searchProduct: [],
     productDetail: {},

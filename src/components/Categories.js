@@ -1,12 +1,28 @@
 import React, { useState } from 'react';
 import {useSelector} from "react-redux";
 import "./CSS/categories.css";
+import {IoIosArrowForward, IoIosArrowBack} from "react-icons/io"
 
 
 function Categories() {
     const [slide, setSlide] = useState("start")
     const listCategories = useSelector((state) => state.categories)
 
+    const handleClickNext = () => {
+        if (slide === 'start') {
+            setSlide('middle')
+        } else if (slide === 'middle') {
+            setSlide('end')
+        }
+    }
+
+    const handleClickPrev = () => {
+        if (slide === 'end') {
+            setSlide('middle')
+        } else if (slide === 'middle') {
+            setSlide('start')
+        }
+    }
 
     return (
         <div className='container-categories'>
@@ -19,16 +35,22 @@ function Categories() {
                 </div>
             </div>
 
-            <div className={`categories ${slide}`}>
-                {listCategories?.map(category => {
-                return (
-                    <div key={category.id} className="category-card">
-                        {category.icon}
-                        <p className='category-name'>{category.name}</p>
-                        
-                    </div>
-                )
-                })}
+            <div className='category-bottom'>
+                <button onClick={handleClickPrev} className={`category-btn-arrow-left ${slide === 'start' ? "noShow" : ""}`}><IoIosArrowBack/></button>
+
+                <div className={`categories ${slide}`}>
+                    {listCategories?.map(category => {
+                    return (
+                        <div key={category.id} className="category-card">
+                            {category.icon}
+                            <p className='category-name'>{category.name}</p>
+                            
+                        </div>
+                    )
+                    })}
+                </div>
+
+                <button onClick={handleClickNext} className={`category-btn-arrow-right ${slide === 'end' ? "noShow" : ""}`}><IoIosArrowForward/></button>
             </div>
         
         
