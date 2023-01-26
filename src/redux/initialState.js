@@ -22,6 +22,7 @@ import {FiMonitor} from "react-icons/fi";
 
 const initialState = {
     offers: [],
+    description: [],
     categories: [
           {
             "id": "MLA1071",
@@ -188,6 +189,7 @@ const initialState = {
     productDetail: {},
     imageDetail: "",
     cart: [],
+    questions: [],
     benefits: [
         {
             background: widget,

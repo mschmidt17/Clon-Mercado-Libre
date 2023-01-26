@@ -1,4 +1,4 @@
-import { OFFERS, SEARCH_PRODUCT, DETAIL, ADD_PRODUCT, DELETE_PRODUCT, LOADING, CLEAN_SEARCH } from "./actions.js"
+import { OFFERS, SEARCH_PRODUCT, DETAIL, ADD_PRODUCT, DELETE_PRODUCT, LOADING, CLEAN_SEARCH, QUESTIONS, DESCRIPTION } from "./actions.js"
 import initialState from "./initialState.js"
 
 
@@ -24,6 +24,18 @@ export default function rootReducer(state = initialState, action) {
                 ...state,
                 productDetail: action.payload,
                 imageDetail: action.payload.pictures[0]?.url
+            }
+
+        case QUESTIONS:
+            return {
+                ...state,
+                questions: action.payload,
+            }
+
+        case DESCRIPTION:
+            return {
+                ...state,
+                description: action.payload,
             }
 
         case ADD_PRODUCT:

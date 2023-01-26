@@ -10,15 +10,17 @@ import {BsTruck} from "react-icons/bs"
 import {CiTrophy} from "react-icons/ci"
 import '../components/CSS/detail.css';
 import Advertising from '../components/Advertising.js';
+import Question from '../components/Question.js';
+import Description from '../components/Description.js';
 
 
 
 function DetailProduct() {
   const dispatch = useDispatch()
   const { id } = useParams()
-  const isLoading = useSelector((state) => state.loading)
   const detail = useSelector((state) => state.productDetail)
   const image = useSelector((state) => state.imageDetail)
+  var i = 0;
   
   useEffect(() => {
     dispatch(verDetail(id))
@@ -66,7 +68,7 @@ function DetailProduct() {
               <h3> Caracteristicas principales </h3>
               <div>
                 {detail?.attributes?.slice(0, 5).map((a) => {return(
-                  <table key={a.value_id}>
+                  <table key={a.value_id? a.value_id : i++}>
                     <thead>
                       <tr>
                         <th> {a.name} </th>
@@ -86,11 +88,16 @@ function DetailProduct() {
               <h3>Otras características</h3>
               <div className='contanier-other-details'>
                 {detail?.attributes?.slice(5, detail.attributes.length - 1).map((a) => {return(
-                  <p key={a.value_id}><b>{a.name}:</b> {a.value_name}</p>
+                  <p key={a.value_id? a.value_id : i++}><b>{a.name}:</b> {a.value_name}</p>
                 )})}
               </div>
             </div>
+            <Description id={id}/>
+
+            <Question id={id}/>
           </div>
+
+          
 
           <div className='detail-right'>
             <div className='detail-right-shipping'>

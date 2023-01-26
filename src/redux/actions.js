@@ -8,6 +8,8 @@ export const DELETE_PRODUCT = "DELETE_PRODUCT"
 export const BUY_PRODUCTS = "BUY_PRODUCTS"
 export const LOADING = "LOADING"
 export const CLEAN_SEARCH = "CLEAN_SEARCH"
+export const QUESTIONS = "QUESTIONS"
+export const DESCRIPTION ="DESCRIPTION"
 
 export function offers() {
     return async function (dispatch) {
@@ -62,6 +64,45 @@ export function verDetail(id) {
         return dispatch({
           type: DETAIL,
           payload: result.data
+        })
+  
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  }
+
+  export function description(id) {
+    return async function (dispatch) {
+      dispatch(loading())
+      try {
+        const URL = `https://api.mercadolibre.com/items/${id}/description`
+        const result = await axios.get(URL)
+
+        console.log(result.data.plain_text)
+  
+        return dispatch({
+          type: DESCRIPTION,
+          payload: result.data.plain_text
+        })
+  
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  }
+  
+
+  export function questions(id) {
+    return async function (dispatch) {
+      dispatch(loading())
+      try {
+        const URL = `https://api.mercadolibre.com/questions/search?item=${id}`
+        const result = await axios.get(URL)
+  
+        return dispatch({
+          type: QUESTIONS,
+          payload: result.data.questions.slice(0, 8)
         })
   
       } catch (error) {
