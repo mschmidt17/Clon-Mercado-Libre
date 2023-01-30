@@ -1,0 +1,18 @@
+.container-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 4%;
+}
+
+.description-text{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.container-description p {
+    color: rgb(114, 113, 113);
+    font-size: 1.2rem;
+    font-weight: lighter;
+    
+}

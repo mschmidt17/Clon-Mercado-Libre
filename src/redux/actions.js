@@ -78,10 +78,7 @@ export function verDetail(id) {
       try {
         const URL = `https://api.mercadolibre.com/items/${id}/description`
         const result = await axios.get(URL)
-
-        console.log(result.data.plain_text)
-  
-        return dispatch({
+          return dispatch({
           type: DESCRIPTION,
           payload: result.data.plain_text
         })
