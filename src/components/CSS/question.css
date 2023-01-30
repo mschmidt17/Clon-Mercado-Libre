@@ -1,0 +1,123 @@
+.container-question{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5% 4%;
+}
+
+.question-title{
+    font-weight: 400;
+    line-height: 1.25;
+    margin: 0;
+}
+
+.question-ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0;
+    margin-top: 3%;
+    border-radius: 4px;
+    padding: 0;
+}
+
+.question-ul li{
+    background-color: #E2EDFC;
+    color: #6483FA ;
+    padding: 1% 1.5%;
+    margin: 1% 0;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.question-p{
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 5%;
+    letter-spacing: 0.5px;
+}
+
+.container-btn{
+    display: flex;
+    align-items: center;
+    margin: 2% 0;
+}
+
+.question-input{
+    border-radius: 8px;
+    font-size: 16px;
+    height: 2.5rem;
+    width: 36rem;  
+    line-height: 1.35;
+    border: 1px solid rgba(128, 128, 128, 0.664);
+    padding: 0.5% 2%;
+    margin-right: 2%;
+}
+
+.question-input:focus{
+    border: 2px solid #3876d4ec;
+}
+
+.btn-question{
+    background: #3876d4ec;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    height: 3.1rem;
+    width: 10rem;
+    padding: 0 24px;
+    color: white;
+    border-color: transparent;
+    cursor: pointer;
+    flex-direction: row;
+}
+
+.btn-question:hover{
+    background-color: #236ad3 ;
+}
+
+.question-text{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+}
+
+.question-next{
+    font-size: 16px;
+    font-weight: lighter;
+    letter-spacing: 0.3px;
+}
+
+.answer-container{
+    display: flex;
+    margin: 1% 0 0 2%;
+}
+
+.rotate-icon{
+    transform: rotate(180deg);
+    font-size: 2.5rem;
+    color: rgba(0, 0, 0, 0.274);
+    font-weight: lighter;
+    align-self: flex-start;
+    margin: -2.5% 1% 0 0;
+}
+
+.question-answer{
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.466);
+}
+
+.question-last{
+    font-size: 0.9rem;
+    color: #236ad3;
+    margin-top: 2%;
+    cursor: pointer;
+}
