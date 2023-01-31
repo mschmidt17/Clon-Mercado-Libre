@@ -1,7 +1,7 @@
 import React from "react";
 import "./CSS/carousel.css";
 import argentina from "../assets/argentina.webp";
-import ruta from "../assets/ruta.webp";
+import full from "../assets/Full.webp";
 import herramientas from "../assets/herramientas.webp";
 import belleza from "../assets/belleza.webp";
 import ofertas from "../assets/ofertas.webp";
@@ -18,7 +18,7 @@ function Carousel() {
           <img src={argentina}alt="argentina" />
         </li>
         <li>
-          <img src={ruta}alt="ruta" />
+          <img src={full}alt="full" />
         </li>
         <li>
             <img src={belleza}alt="belleza"/>
