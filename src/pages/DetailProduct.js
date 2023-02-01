@@ -22,6 +22,13 @@ function DetailProduct() {
   const image = useSelector((state) => state.imageDetail)
   var i = 0;
   
+  const [bigImage, setBigImage] = useState("")
+
+  const handleMouseEnter = (e, url) => {
+    e.preventDefault()
+    setBigImage(url)
+  };
+
   useEffect(() => {
     dispatch(verDetail(id))
     return () => {                        
@@ -39,11 +46,11 @@ function DetailProduct() {
             <div className='detail-left-top'>
               <div className='container-tumbnails'>
                 {detail.pictures?.slice(0, 8).map((p) => {
-                  return <img src={p.url} key={p.id} alt="pic" width="40" className='thumbnail-detail'/>
+                  return <img src={p.url} key={p.id} alt="pic" width="40" className='thumbnail-detail' onMouseEnter={(e) => handleMouseEnter(e, p.url)} />
                 })}
               </div>
               <div className='detail-container-imagen'>
-                <img src={image} alt="producto" className='picture-detail'/> 
+                <img src={!bigImage ? image : bigImage} alt="producto" className='picture-detail'/> 
               </div>
               <div className='container-details'>
                 <GrFavorite className='heart-icon'/>

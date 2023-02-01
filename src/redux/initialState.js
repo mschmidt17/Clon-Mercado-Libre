@@ -22,7 +22,7 @@ import {FiMonitor} from "react-icons/fi";
 
 const initialState = {
     offers: [],
-    description: [],
+    description: "",
     categories: [
           {
             "id": "MLA1071",
