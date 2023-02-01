@@ -20,6 +20,14 @@ p{
     margin: 1.8% 0;
 }
 
+.pay-img{
+    display: flex;
+    width: 50px;
+    border-radius: 100px;
+    margin-right: 6%;
+    cursor: pointer;
+}
+
 .plus{
     display: flex;
     height: 5.6rem;
@@ -35,13 +43,6 @@ p{
     border-radius: 100px;
 }
 
-.pay-img{
-    display: flex;
-    width: 50px;
-    border-radius: 100px;
-    margin-right: 6%;
-    cursor: pointer;
-}
 
 .pay-subtext{
     color: #2a78ec;

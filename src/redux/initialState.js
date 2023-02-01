@@ -285,6 +285,32 @@ const initialState = {
             image: mascotas,
             id: 7
         },
+      ],
+    payments: [
+        {
+          title: "Tarjeta de credito",
+          text: "Ver promociones bancarias",
+          image: "https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/credit-card.svg",
+          id: 1
+        },
+        {
+          title: "Tarjeta de debito",
+          text: "Ver más",
+          image: "https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/debit-card.svg",
+          id: 2
+        },
+        {
+          title: "Cuotas sin tarjeta",
+          text: "Conocé Mercado Credito",
+          image: "https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/mercado-creditsv2.svg",
+          id: 3
+        },
+        {
+          title: "Efectivo",
+          text: "Ver más",
+          image: "https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/payment-agreement.svg",
+          id: 4
+        },
 
     ],
 
