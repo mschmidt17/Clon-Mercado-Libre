@@ -27,6 +27,7 @@ function Home() {
 
   useEffect(() => {
     dispatch(offers());
+    window.scrollTo(0, 0)
   }, [])
 
   return (

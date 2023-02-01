@@ -31,6 +31,7 @@ function DetailProduct() {
 
   useEffect(() => {
     dispatch(verDetail(id))
+    window.scrollTo(0, 0)
     return () => {                        
       dispatch(cleanSearch())
     };
@@ -75,7 +76,7 @@ function DetailProduct() {
               <h3> Caracteristicas principales </h3>
               <div>
                 {detail?.attributes?.slice(0, 5).map((a) => {return(
-                  <table key={a.value_id? a.value_id : i++}>
+                  <table key={i++}>
                     <thead>
                       <tr>
                         <th> {a.name} </th>
@@ -95,7 +96,7 @@ function DetailProduct() {
               <h3>Otras características</h3>
               <div className='contanier-other-details'>
                 {detail?.attributes?.slice(5, detail.attributes.length - 1).map((a) => {return(
-                  <p key={a.value_id? a.value_id : i++}><b>{a.name}:</b> {a.value_name}</p>
+                  <p key={i++}><b>{a.name}:</b> {a.value_name}</p>
                 )})}
               </div>
             </div>
