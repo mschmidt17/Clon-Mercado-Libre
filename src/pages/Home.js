@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import {offers} from '../redux/actions.js';
+import {offers, vendidos} from '../redux/actions.js';
 import Carousel from '../components/Carousel.js';
 import Payments from '../components/Payments.js';
 import Offers from '../components/Offers.js';
@@ -23,10 +23,13 @@ function Home() {
   const discover = useSelector((state) => state.discover);
   const interests = useSelector((state) => state.interests);
   const listOffers = useSelector((state) => state.offers)
+  const listVendidos = useSelector((state) => state.vendidos)
 
 
   useEffect(() => {
     dispatch(offers());
+    dispatch(vendidos());
+
     window.scrollTo(0, 0)
   }, [])
 
@@ -35,12 +38,12 @@ function Home() {
     <div className='container-home'>
         <Carousel/>
         <Payments/>
-        <Offers title="Ofertas" listOffers={listOffers.slice(0, 5)}/>
+        <Offers title="Ofertas" listOffers={listOffers}/>
         <Subscription/>
         <Benefits/>
         <Advertising/>
         <Discover data={discover} title="Descubrí"/>
-        <Offers title="Mas vendidos" listOffers={listOffers.slice(5, 10)}/>
+        <Offers title="Mas vendidos" listOffers={listVendidos}/>
         <Discover data={interests} title="Te puede interesar"/>
         <Categories/>
         <Footer/>

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import { Link, useSearchParams } from 'react-router-dom';
-import {cleanSearch} from "../redux/actions.js"
+import {cleanSearch, searchProduct} from "../redux/actions.js"
 import publicidad from "../assets/publicidad.jpg";
 import publi from "../assets/publi.jfif";
 import ofertas from "../assets/ofertas.png";
@@ -13,14 +13,21 @@ import ToggleSwitch from "../components/ToggleSwitch";
 function Results() {
     const dispatch = useDispatch()
     const products = useSelector((state) => state.searchProduct)
+    console.log(products)
+
     const [params] = useSearchParams()
     const product = params.get('search') ?? "";
+    console.log("soy lo que esta en el path", product)
 
     useEffect(() => {
+        if (products.length === 0) {
+            console.log("me estoy ejecutando")
+            searchProduct(product)
+        }
         return () => {                        
             dispatch(cleanSearch())
         };                 
-    }, [])
+    }, [dispatch])
 
     
 

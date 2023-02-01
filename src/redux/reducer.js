@@ -1,4 +1,4 @@
-import { OFFERS, SEARCH_PRODUCT, DETAIL, ADD_PRODUCT, DELETE_PRODUCT, LOADING, CLEAN_SEARCH, QUESTIONS, DESCRIPTION } from "./actions.js"
+import { OFFERS, SEARCH_PRODUCT, DETAIL, ADD_PRODUCT, DELETE_PRODUCT, LOADING, CLEAN_SEARCH, QUESTIONS, DESCRIPTION, MAS_VENDIDOS } from "./actions.js"
 import initialState from "./initialState.js"
 
 
@@ -9,6 +9,13 @@ export default function rootReducer(state = initialState, action) {
             return {
                 ...state,
                 offers: action.payload,
+                loading: false,
+            }
+
+        case MAS_VENDIDOS:
+            return {
+                ...state,
+                vendidos: action.payload,
                 loading: false,
             }
                     

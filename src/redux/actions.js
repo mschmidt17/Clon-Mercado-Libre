@@ -10,18 +10,40 @@ export const LOADING = "LOADING"
 export const CLEAN_SEARCH = "CLEAN_SEARCH"
 export const QUESTIONS = "QUESTIONS"
 export const DESCRIPTION ="DESCRIPTION"
+export const MAS_VENDIDOS ="MAS_VENDIDOS"
+
 
 export function offers() {
     return async function (dispatch) {
         dispatch(loading())
         try {
-            const URL = `https://api.mercadolibre.com/sites/MLA/search?q=ofertas`
+            const URL = `https://api.mercadolibre.com/sites/MLA/search?q=televisor`
             const { data: result } = await axios.get(URL)
-            const offers = result.results?.sort(() => 0.5 - Math.random()).slice(0, 10)
+            const offers = result.results?.slice(0, 5)
 
             return dispatch({
                 type: OFFERS,
                 payload: offers
+            })
+    
+        } catch (error) {
+          console.log(error);
+        }
+      }
+  }
+
+
+  export function vendidos() {
+    return async function (dispatch) {
+        dispatch(loading())
+        try {
+            const URL = `https://api.mercadolibre.com/sites/MLA/search?q=gamers`
+            const { data: result } = await axios.get(URL)
+            const vendidos = result.results?.sort(() => 0.5 - Math.random()).slice(0, 5)
+
+            return dispatch({
+                type: MAS_VENDIDOS,
+                payload: vendidos
             })
     
         } catch (error) {
