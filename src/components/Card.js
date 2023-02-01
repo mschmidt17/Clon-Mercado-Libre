@@ -12,7 +12,7 @@ function Card({offer}) {
     return(
         <div className="card-container"> 
             <div className="card-img">
-                <img src={offer.thumbnail} alt="imagen prodcuto" width="150"/>
+                <img src={offer.thumbnail} alt="imagen produCto" width="150"/>
             </div>
 
             <div className="card-middle">

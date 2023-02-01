@@ -18,7 +18,6 @@ function Description({id}) {
         newText = newText + text[i] + "<br></br>"
       }
     }
-    console.log(newText)
     return newText
   }
 
