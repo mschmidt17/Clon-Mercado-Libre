@@ -21,7 +21,6 @@ function DetailProduct() {
   const detail = useSelector((state) => state.productDetail)
   const image = useSelector((state) => state.imageDetail)
   var i = 0;
- 
   
   const [bigImage, setBigImage] = useState("")
 
@@ -29,6 +28,11 @@ function DetailProduct() {
     e.preventDefault()
     setBigImage(url)
   };
+
+  const number = (x) => {
+    return x?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  }
+
 
   useEffect(() => {
     dispatch(verDetail(id))
@@ -63,16 +67,16 @@ function DetailProduct() {
                 <h3>{detail.title}</h3>
                 {detail.original_price && detail.price !== detail.original_price ? 
                 <div>
-                  <del>$ {detail.original_price}</del> 
+                  <del>$ {number(detail.original_price)}</del> 
                   <div className='detail-price'>
-                    <h2>$ {detail.price.toFixed(2)}</h2>
-                    <p> {Math.round((detail.original_price - detail.price) / detail.original_price * 100)}% OFF</p>
+                    <h2>$ {number(detail.price.toFixed(2))}</h2>
+                    <p> {number(Math.round((detail.original_price - detail.price) / detail.original_price * 100))}% OFF</p>
                   </div>
                 </div>
                 : 
-                <h2>$ {detail.price}</h2>}
+                <h2>$ {number(Math.ceil(detail?.price))}</h2>}
                 
-                <p>en 6x $ {(detail.price/6).toFixed(2)}</p>
+                <p>en 6x $ {number((detail.price/6).toFixed(2))}</p>
                 <h6 className='detail-point'>Ver los medios de pago</h6>
               </div>
             </div>
