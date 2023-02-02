@@ -29,6 +29,7 @@ function Search () {
             type="text"
             placeholder="Buscar productos, marcas y más..."
             onChange={(e) => handleInputChange(e)} 
+            value={name}
             />
             <button className="btn-search" type="button">
                 <p className='linea-search'>|</p>
