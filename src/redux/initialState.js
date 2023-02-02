@@ -315,7 +315,6 @@ const initialState = {
         },
 
     ],
-
     loading: false,
 };
 

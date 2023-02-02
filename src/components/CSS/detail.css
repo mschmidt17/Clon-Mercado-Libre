@@ -60,7 +60,7 @@
 }
 
 .container-img-thumbnail:hover{
-    border: 2px solid #2369d3cc;
+    border: 2px solid #3483FA;
 }
 
 .detail-container-imagen{
@@ -91,7 +91,7 @@
 }
 
 .heart-icon path{
-    stroke: #2a78ec;
+    stroke: #3483FA;
 }
 
 .container-details h3 {
@@ -249,7 +249,7 @@ tbody{
 }
 
 .detail-location{
-    color: #2a78ec;
+    color: #5A8BD4;
     font-size: 0.9rem;
     cursor: pointer;
     margin: 1.5% 0 0 12%;

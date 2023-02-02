@@ -1,12 +1,12 @@
 import React from 'react';
 import {useSelector} from "react-redux";
 import { Link, useSearchParams } from 'react-router-dom';
-import {} from "../redux/actions.js"
 import publicidad from "../assets/publicidad.jpg";
 import publi from "../assets/publi.jfif";
 import ofertas from "../assets/ofertas.png";
 import '../components/CSS/results.css';
 import ToggleSwitch from "../components/ToggleSwitch";
+import {number} from "../redux/actions.js";
 
 
 
@@ -16,10 +16,6 @@ function Results() {
     const ubicacion = useSelector((state) => state.locations)
     const [params] = useSearchParams()
     const product = params.get('search') ?? "";
-
-    const number = (x) => {
-        return x?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-      }
 
 
 

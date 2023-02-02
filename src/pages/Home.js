@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import {offers, vendidos} from '../redux/actions.js';
 import Carousel from '../components/Carousel.js';
@@ -14,12 +14,9 @@ import Footer from '../components/Footer.js';
 
 
 
-//import './home.css';
-
 
 function Home() {
   const dispatch = useDispatch()
-  const isLoading = useSelector((state) => state.loading)
   const discover = useSelector((state) => state.discover);
   const interests = useSelector((state) => state.interests);
   const listOffers = useSelector((state) => state.offers)

@@ -1,9 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from 'react-router-dom';
-import { verDetail } from '../redux/actions.js';
-import {cleanSearch} from "../redux/actions.js";
-import {number} from "../redux/actions.js";
+import {number, cleanSearch, verDetail} from "../redux/actions.js";
 import Supermarket from "../components/Supermarket.js"
 import {IoLocationOutline} from "react-icons/io5";
 import{GrFavorite} from "react-icons/gr"
@@ -21,6 +19,9 @@ function DetailProduct() {
   const { id } = useParams()
   const detail = useSelector((state) => state.productDetail)
   const image = useSelector((state) => state.imageDetail)
+  const price = useSelector((state) => state.price)
+  const originalPrice = useSelector((state) => state.originalPrice)
+
   var i = 0;
   
   const [bigImage, setBigImage] = useState("")
@@ -33,6 +34,7 @@ function DetailProduct() {
   useEffect(() => {
     dispatch(verDetail(id))
     window.scrollTo(0, 0)
+    console.log(detail)
     return () => {                        
       dispatch(cleanSearch())
     };
@@ -42,9 +44,9 @@ function DetailProduct() {
   return (
     <div className='container-detail'>
       {detail?.tags?.includes("supermarket_eligible") ? <Supermarket/> : null }
-
         <div className="product-detail">
           <div className='detail-left'>
+
             <div className='detail-left-top'>
               <div className='container-tumbnails'>
                 {detail.pictures?.slice(0, 8).map((p) => {
@@ -56,25 +58,33 @@ function DetailProduct() {
                 })}
               </div>
               <div className='detail-container-imagen'>
-                <img src={!bigImage ? image : bigImage} alt="producto" className='picture-detail'/> 
+                <img src={!bigImage ? image : bigImage} alt="" className='picture-detail'/> 
               </div>
-              <div className='container-details'>
-                <GrFavorite className='heart-icon'/>
-                <h3>{detail.title}</h3>
-                {detail.original_price && detail.price !== detail.original_price ? 
-                <div>
-                  <del>$ {number(detail.original_price)}</del> 
-                  <div className='detail-price'>
-                    <h2>$ {number(Math.ceil(detail?.price))}</h2>
-                    <p> {number(Math.round((detail.original_price - detail.price) / detail.original_price * 100))}% OFF</p>
-                  </div>
+              {Object.entries(detail).length === 0 && detail ? (
+                <div className='detail-left-top'></div>
+              ) : (
+                <div className='container-details'>
+                  <GrFavorite className='heart-icon'/>
+                  <h3>{detail.title}</h3>
+                    {detail.original_price && detail.price !== detail.original_price ? 
+                      <div>
+                        <del>$ {new Intl.NumberFormat('de-DE').format(Math.ceil(detail.original_price))}</del> 
+                        <div className='detail-price'>
+                          <h2>$ {new Intl.NumberFormat('de-DE').format(Math.ceil(detail.original_price))}</h2>
+                          <p> {Math.round((detail.original_price - detail.price) / detail.original_price * 100)}% OFF</p>
+                        </div>
+                        <p>en 6x $ {new Intl.NumberFormat('de-DE').format(Math.ceil(detail.price/6))}</p>
+                        <h6 className='detail-point'>Ver los medios de pago</h6>
+                      </div>
+                    : 
+                      <div>
+                        <h2>$ {new Intl.NumberFormat('de-DE').format(Math.ceil(detail.price))}</h2>
+                        <p>en 6x $ {new Intl.NumberFormat('de-DE').format(Math.ceil(detail.price/6))}</p>
+                        <h6 className='detail-point'>Ver los medios de pago</h6>
+                      </div>
+                    }
                 </div>
-                : 
-                <h2>$ {number(Math.ceil(detail?.price))}</h2>}
-                
-                <p>en 6x $ {number(Math.ceil(detail.price/6))}</p>
-                <h6 className='detail-point'>Ver los medios de pago</h6>
-              </div>
+              )}
             </div>
 
             <div className='detail-left-table'>
@@ -194,9 +204,7 @@ function DetailProduct() {
               </div>
               <p className='detail-date'>Conocé otros medios de pago</p>
             </div>
-
           </div>
-
         </div>
 
         <Advertising/>
