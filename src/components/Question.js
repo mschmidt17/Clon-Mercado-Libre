@@ -7,7 +7,6 @@ import "./CSS/question.css"
 function Question({id}) {
   const dispatch = useDispatch()
   const pregunta = useSelector((state) => state.questions)
-  var j = 0;
 
 
   useEffect(() => {
@@ -41,11 +40,11 @@ function Question({id}) {
       <div>
         {pregunta?.map((q) => {
           return(
-            <div className='question-text' key={j++}>
-              <h3 className='question-next'> {q.text} </h3>
+            <div className='question-text' key={q.id}>
+              <h3 className='question-next'> {q.text == null ? "" : q.text } </h3>
               <div className='answer-container'>
                 <div className='rotate-icon'>¬</div>
-                <p className='question-answer'> {q.answer.text} </p>
+                <p className='question-answer'> {q.answer == null ? "" : q.answer.text} </p>
               </div>
             </div>
           )
