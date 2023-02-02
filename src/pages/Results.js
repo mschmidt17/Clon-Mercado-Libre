@@ -17,6 +17,10 @@ function Results() {
     const [params] = useSearchParams()
     const product = params.get('search') ?? "";
 
+    const number = (x) => {
+        return x?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+      }
+
 
 
     return (
@@ -96,7 +100,7 @@ function Results() {
                                 <img src={result.thumbnail} width="140" className='img-results' alt='producto'/>
                                 <div className='container-card-results'>
                                     <p className='title-results'>{result.title} </p>
-                                    <p className='price-results'> $ {Math.floor(result.price)}</p>
+                                    <p className='price-results'> $ {number(Math.floor(result.price))}</p>
                                     {result.shipping.free_shipping ? <p className='free-today'> Llega gratis hoy </p> : null}
                                 </div>
                                     
