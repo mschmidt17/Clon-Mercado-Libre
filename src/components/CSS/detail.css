@@ -38,18 +38,29 @@
     align-items: center;
     justify-content: flex-start;
     margin: 1% 0 0 1%;
+    width: 4rem;
+}
+
+.container-img-thumbnail{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    margin: 10% 0;
+    border: 0.5px solid rgb(180, 179, 179);
+    border-radius: 4px;
 }
 
 .thumbnail-detail{
-    padding: 6% 8%;
-    border-radius: 4px;
-    border: 0.5px solid rgb(180, 179, 179);
-    margin: 10% 0;
     cursor: pointer;
+    max-width: 95%;
+    max-height: 86%;
+    padding: 6% 8%;
 }
 
-.thumbnail-detail:hover{
-    border: 2px solid blue;
+.container-img-thumbnail:hover{
+    border: 2px solid #2369d3cc;
 }
 
 .detail-container-imagen{

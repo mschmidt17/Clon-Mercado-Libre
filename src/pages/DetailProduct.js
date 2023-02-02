@@ -21,6 +21,7 @@ function DetailProduct() {
   const detail = useSelector((state) => state.productDetail)
   const image = useSelector((state) => state.imageDetail)
   var i = 0;
+ 
   
   const [bigImage, setBigImage] = useState("")
 
@@ -47,7 +48,11 @@ function DetailProduct() {
             <div className='detail-left-top'>
               <div className='container-tumbnails'>
                 {detail.pictures?.slice(0, 8).map((p) => {
-                  return <img src={p.url} key={p.id} alt="pic" width="40" className='thumbnail-detail' onMouseEnter={(e) => handleMouseEnter(e, p.url)} />
+                  return(
+                    <div className='container-img-thumbnail' key={p.id} >
+                      <img src={p.url} alt="pic" className='thumbnail-detail' onMouseEnter={(e) => handleMouseEnter(e, p.url)} />
+                    </div>
+                  )
                 })}
               </div>
               <div className='detail-container-imagen'>

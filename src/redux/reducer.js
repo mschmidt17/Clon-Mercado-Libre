@@ -20,9 +20,29 @@ export default function rootReducer(state = initialState, action) {
             }
                     
         case SEARCH_PRODUCT:
+
+            const allBrands = [];
+            const allLocations = []
+            for (let i = 0; i < 20; i++) {
+                for (let j = 0; j < 20; j++) {
+                    if (allBrands.includes(action.payload[i].attributes[0].value_name)) {
+                        break;
+                    } else {
+                        allBrands.push(action.payload[i].attributes[0].value_name)
+                    }
+                    if (allLocations.includes(action.payload[i].address.city_name)) {
+                        break;
+                    } else {
+                        allLocations.push(action.payload[i].address.city_name)
+                    }
+                }     
+            }
+
             return {
                 ...state,
                 searchProduct: action.payload,
+                brands: allBrands,
+                locations: allLocations,
                 loading: false,
             }
 

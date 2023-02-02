@@ -286,6 +286,8 @@ const initialState = {
             id: 7
         },
       ],
+      brands: [],
+      locations: [],
     payments: [
         {
           title: "Tarjeta de credito",

@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import {useDispatch, useSelector} from "react-redux";
+import React from 'react';
+import {useSelector} from "react-redux";
 import { Link, useSearchParams } from 'react-router-dom';
-import {cleanSearch, searchProduct} from "../redux/actions.js"
+import {} from "../redux/actions.js"
 import publicidad from "../assets/publicidad.jpg";
 import publi from "../assets/publi.jfif";
 import ofertas from "../assets/ofertas.png";
@@ -11,25 +11,13 @@ import ToggleSwitch from "../components/ToggleSwitch";
 
 
 function Results() {
-    const dispatch = useDispatch()
     const products = useSelector((state) => state.searchProduct)
-    console.log(products)
-
+    const marcas = useSelector((state) => state.brands)
+    const ubicacion = useSelector((state) => state.locations)
     const [params] = useSearchParams()
     const product = params.get('search') ?? "";
-    console.log("soy lo que esta en el path", product)
 
-    useEffect(() => {
-        if (products.length === 0) {
-            console.log("me estoy ejecutando")
-            searchProduct(product)
-        }
-        return () => {                        
-            dispatch(cleanSearch())
-        };                 
-    }, [dispatch])
 
-    
 
     return (
         <div className='container-results'>
@@ -51,9 +39,9 @@ function Results() {
 
                     <div>
                         <h4>Marca</h4>
-                        {products?.slice(0, 12).map(product => {
+                        {marcas.map(brand => {
                         return (
-                            <p className="results-city" key={product.id}> {product.attributes[0].value_name} </p>
+                            <p className="results-city" > {brand} </p>
                         )
                         })}
                         <p className="results-show-more"> Mostrar más </p>
@@ -66,9 +54,9 @@ function Results() {
 
                     <div>
                         <h4>Ubicación</h4>
-                        {products?.slice(0, 12).map(product => {
+                        {ubicacion.map(location => {
                         return (
-                            <p className="results-city" key={product.id}> {product.address.city_name} </p>
+                            <p className="results-city" > {location} </p>
                         )
                         })}
                         <p className="results-show-more"> Mostrar más </p>
