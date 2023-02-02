@@ -6,8 +6,6 @@ import './CSS/offers.css';
 
 export default function Offers({title, listOffers}) {
 
-   
-
     return (
 
         <div className="offers-container">

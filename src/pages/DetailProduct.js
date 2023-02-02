@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from 'react-router-dom';
 import { verDetail } from '../redux/actions.js';
 import {cleanSearch} from "../redux/actions.js";
+import {number} from "../redux/actions.js";
 import Supermarket from "../components/Supermarket.js"
 import {IoLocationOutline} from "react-icons/io5";
 import{GrFavorite} from "react-icons/gr"
@@ -28,11 +29,6 @@ function DetailProduct() {
     e.preventDefault()
     setBigImage(url)
   };
-
-  const number = (x) => {
-    return x?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-  }
-
 
   useEffect(() => {
     dispatch(verDetail(id))
@@ -69,14 +65,14 @@ function DetailProduct() {
                 <div>
                   <del>$ {number(detail.original_price)}</del> 
                   <div className='detail-price'>
-                    <h2>$ {number(detail.price.toFixed(2))}</h2>
+                    <h2>$ {number(Math.ceil(detail?.price))}</h2>
                     <p> {number(Math.round((detail.original_price - detail.price) / detail.original_price * 100))}% OFF</p>
                   </div>
                 </div>
                 : 
                 <h2>$ {number(Math.ceil(detail?.price))}</h2>}
                 
-                <p>en 6x $ {number((detail.price/6).toFixed(2))}</p>
+                <p>en 6x $ {number(Math.ceil(detail.price/6))}</p>
                 <h6 className='detail-point'>Ver los medios de pago</h6>
               </div>
             </div>

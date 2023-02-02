@@ -7,6 +7,7 @@ export const ADD_PRODUCT = "ADD_PRODUCT"
 export const DELETE_PRODUCT = "DELETE_PRODUCT"
 export const BUY_PRODUCTS = "BUY_PRODUCTS"
 export const LOADING = "LOADING"
+export const NUMBER = "NUMBER"
 export const CLEAN_SEARCH = "CLEAN_SEARCH"
 export const QUESTIONS = "QUESTIONS"
 export const DESCRIPTION ="DESCRIPTION"
@@ -69,6 +70,11 @@ export function searchProduct(title) {
     }
   }
 }
+
+export function number(x) {
+  return x?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
 
 export function cleanSearch() {
   return{
