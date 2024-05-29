@@ -4,7 +4,6 @@ Se trata de un clon de Mercado Libre, en el que consumo datos de su API desde el
 
 El proyecto fue realizado con JavaScript - React - Redux - CSS - HTML.
 
-### Probalo! https://clon-mercado-libre-ms23.vercel.app/
 <br></br>
 <br></br>
 ![Meli 1](https://user-images.githubusercontent.com/99290382/210788945-960de16a-9332-40c8-8986-47045c57ca66.png)
